@@ -1,0 +1,104 @@
+# Robots.txt for AbroadJobSeeker.com
+# International Job Search Platform with Visa Sponsorship
+
+# Allow all search engines to crawl the website
+User-agent: *
+
+# Allow crawling of main public pages
+Allow: /
+Allow: /home.html
+Allow: /about.html
+Allow: /job_list.html
+Allow: /services.html
+Allow: /contact.html
+Allow: /login.html
+Allow: /register.html
+
+# Allow crawling of legal pages
+Allow: /privacy-policy.html
+Allow: /terms-and-conditions.html
+
+# Allow crawling of future job category pages
+Allow: /jobs/
+Allow: /visa/
+Allow: /resources/
+
+# Allow crawling of static assets
+Allow: /favicon.svg
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Disallow admin panel and sensitive areas
+Disallow: /Admin Panel/
+Disallow: /admin/
+Disallow: /Admin Screenshots/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /logs/
+
+# Disallow common crawler traps and non-essential pages
+Disallow: /search?
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /*.asp$
+Disallow: /*.aspx$
+
+# Specific search engines directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block aggressive crawlers and bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://abroadjobseeker.com/sitemap.xml
+
+# Host directive (specify preferred domain)
+Host: abroadjobseeker.com 

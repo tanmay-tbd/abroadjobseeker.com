@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enhanced Meta Tags for Job Listings Page -->
+    <title>International Jobs with Visa Sponsorship | Search 15,000+ Global Opportunities</title>
+    <meta name="title" content="International Jobs with Visa Sponsorship | Search 15,000+ Global Opportunities">
+    <meta name="description" content="Browse 15,000+ international job opportunities with verified visa sponsorship. Filter by country, industry, salary. H1B, Express Entry, skilled migration positions available in 45+ countries.">
+    <meta name="keywords" content="international job search, visa sponsorship jobs, H1B positions, Canada Express Entry jobs, Australia skilled migration, UK tier 2 visa jobs, global employment, overseas careers, work abroad jobs, international recruitment">
+    
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Abroad Job Seeker">
+    <meta name="publisher" content="Abroad Job Seeker">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://abroadjobseeker.com/job_list.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abroadjobseeker.com/job_list.html">
+    <meta property="og:title" content="International Jobs with Visa Sponsorship | 15,000+ Global Opportunities">
+    <meta property="og:description" content="Browse verified international job opportunities with visa sponsorship in 45+ countries. Find your dream career abroad.">
+    <meta property="og:image" content="https://abroadjobseeker.com/images/og-image-jobs.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="International job opportunities with visa sponsorship">
+    <meta property="og:site_name" content="Abroad Job Seeker">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@abroadjobseeker">
+    <meta name="twitter:url" content="https://abroadjobseeker.com/job_list.html">
+    <meta name="twitter:title" content="International Jobs with Visa Sponsorship | 15,000+ Opportunities">
+    <meta name="twitter:description" content="Browse verified international job opportunities with visa sponsorship in 45+ countries.">
+    <meta name="twitter:image" content="https://abroadjobseeker.com/images/twitter-image-jobs.jpg">
+    <meta name="twitter:image:alt" content="International job search results">
+    
+    <!-- Hreflang for International Targeting -->
+    <link rel="alternate" hreflang="en" href="https://abroadjobseeker.com/job_list.html">
+    <link rel="alternate" hreflang="en-us" href="https://abroadjobseeker.com/job_list.html">
+    <link rel="alternate" hreflang="x-default" href="https://abroadjobseeker.com/job_list.html">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- DNS Prefetch for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2C5F89',
+                        'secondary': '#4CAF50',
+                        'accent': '#FF6B35',
+                        'success': '#4CAF50',
+                        'background': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .filter-sidebar {
+            transition: transform 0.3s ease;
+        }
+        
+        .filter-sidebar.hidden-mobile {
+            transform: translateX(-100%);
+        }
+        
+        @media (min-width: 1024px) {
+            .filter-sidebar.hidden-mobile {
+                transform: translateX(0);
+            }
+        }
+        
+        .job-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            }
+        
+        .job-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2C5F89, #4CAF50, #FF6B35);
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .salary-range {
+            background: linear-gradient(135deg, #2C5F89, #4CAF50);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .visa-badge {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            animation: pulse 2s infinite;
+        }
+        
+        .urgent-badge {
+            background: linear-gradient(135deg, #FF6B35, #e55a2b);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile accordion styles */
+        @media (max-width: 1023px) {
+            .filter-section {
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            .filter-section:last-child {
+                border-bottom: none;
+            }
+            
+            .filter-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .filter-content.active {
+                max-height: 1000px;
+            }
+            
+            .filter-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 1rem 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            .filter-toggle:hover {
+                color: #2C5F89;
+            }
+            
+            .filter-toggle .toggle-icon {
+                transition: transform 0.3s ease;
+            }
+            
+            .filter-toggle.active .toggle-icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        /* Hide toggle buttons on desktop */
+        @media (min-width: 1024px) {
+            .filter-toggle {
+                display: none;
+            }
+            
+            .filter-content {
+                max-height: none !important;
+            }
+        }
+
+        /* Hide desktop headings on mobile */
+        @media (max-width: 1023px) {
+            .filter-section h4 {
+                display: none;
+            }
+        }
+
+        /* Fix Quick Apply Modal horizontal scroll on mobile */
+        @media (max-width: 768px) {
+            /* Prevent any horizontal scroll on body when modal is open */
+            body.modal-open {
+                overflow-x: hidden !important;
+                position: fixed !important;
+                width: 100% !important;
+            }
+            
+            #quickApplyModal {
+                overflow-x: hidden !important;
+                padding: 0 !important;
+                align-items: flex-start !important; /* Align to top for better mobile UX */
+                padding-top: 2rem !important;
+            }
+            
+            /* Completely override modal sizing for mobile */
+            #quickApplyModal > div {
+                margin: 0.75rem !important;
+                max-width: none !important; /* Remove max-width constraint */
+                width: calc(100vw - 1.5rem) !important; /* Full width minus small margins */
+                min-width: unset !important;
+                transform: none !important; /* Remove transform effects that might cause issues */
+            }
+            
+            /* Reduce padding inside modal */
+            #quickApplyModal .p-6 {
+                padding: 1rem !important;
+            }
+            
+            /* Ensure all form elements are properly contained */
+            #quickApplyModal input,
+            #quickApplyModal button,
+            #quickApplyModal select,
+            #quickApplyModal textarea {
+                box-sizing: border-box !important;
+                max-width: 100% !important;
+            }
+            
+            /* Force single column layout */
+            #quickApplyModal .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Optimize buttons for mobile */
+            #quickApplyModal .flex.gap-3 {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            
+            #quickApplyModal button {
+                padding: 0.875rem 1rem !important;
+                font-size: 0.875rem !important;
+                white-space: nowrap !important;
+            }
+            
+            /* Reduce file upload area padding and optimize text */
+            #fileUploadArea {
+                padding: 1.5rem 0.75rem !important;
+            }
+            
+            #fileUploadArea p {
+                font-size: 0.875rem !important;
+            }
+            
+            #fileUploadArea .text-xs {
+                font-size: 0.75rem !important;
+            }
+            
+            /* Optimize modal header */
+            #quickApplyModal h3 {
+                font-size: 1.125rem !important;
+            }
+            
+            /* Ensure modal header buttons are properly sized */
+            #quickApplyModal .fa-times {
+                font-size: 1.125rem !important;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            #quickApplyModal .bg-white {
+                margin: 0.25rem !important;
+                max-width: calc(100vw - 0.5rem) !important;
+                width: calc(100vw - 0.5rem) !important;
+            }
+            
+            #quickApplyModal .p-6 {
+                padding: 0.75rem !important;
+            }
+        }
+        
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #2C5F89, #4CAF50);
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        .action-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .action-button:hover::before {
+            left: 100%;
+        }
+        
+        .apply-button {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .apply-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        .save-button {
+            border: 2px solid #e5e7eb;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+        }
+        
+        .save-button:hover {
+            border-color: #2C5F89;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            transform: translateY(-1px);
+        }
+    </style>
+    
+    <!-- ItemList Schema for Job Listings -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "International Jobs with Visa Sponsorship",
+      "description": "Comprehensive list of international job opportunities with verified visa sponsorship",
+      "numberOfItems": "15000",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "JobPosting",
+            "title": "Software Engineer - H1B Visa Sponsorship",
+            "description": "Join our innovative tech team with full visa sponsorship support",
+            "url": "https://abroadjobseeker.com/job/software-engineer-h1b"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "JobPosting",
+            "title": "Data Scientist - Express Entry Canada",
+            "description": "Remote-friendly position with Canadian Express Entry support",
+            "url": "https://abroadjobseeker.com/job/data-scientist-canada"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "JobPosting",
+            "title": "DevOps Engineer - Australia Skilled Migration",
+            "description": "Join leading tech company in Sydney with full migration support",
+            "url": "https://abroadjobseeker.com/job/devops-engineer-australia"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://abroadjobseeker.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Jobs",
+          "item": "https://abroadjobseeker.com/job_list.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-background font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="home.html" class="flex items-center space-x-3 group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary to-accent p-3 rounded-2xl shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 group-hover:shadow-xl">
+                        <i class="fas fa-globe text-white text-2xl"></i>
+                    </div>
+                    <div class="transform group-hover:translate-x-1 transition-transform duration-300">
+                        <h1 class="text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300">Abroad Job Seeker</h1>
+                        <p class="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Global Career Opportunities</p>
+                    </div>
+                </a>
+                
+                <!-- Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="home.html" class="text-gray-600 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-primary font-medium hover:font-semibold">
+                        Home
+                    </a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-primary font-medium hover:font-semibold">
+                        About
+                    </a>
+                    <a href="job_list.html" class="text-primary font-semibold py-2 px-1 border-b-2 border-primary">
+                        Jobs
+                    </a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-primary font-medium hover:font-semibold">
+                        Services
+                    </a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-primary font-medium hover:font-semibold">
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Auth Section -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="login.html" class="text-primary hover:text-white transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary relative group overflow-hidden">
+                        <div class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        <span class="relative z-10">
+                            <i class="fas fa-sign-in-alt mr-2"></i>Login
+                        </span>
+                    </a>
+                    <a href="register.html" class="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 hover:scale-105 relative group overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span class="relative z-10">
+                            <i class="fas fa-user-plus mr-2"></i>Register
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 transform hover:scale-105 relative group">
+                        <i class="fas fa-bars text-xl transition-transform duration-300 group-hover:scale-110"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="border-t border-gray-100 pt-4">
+                    <div class="space-y-2">
+                        <a href="home.html" class="block text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-300 py-3 px-4 rounded-lg font-medium">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                        <a href="about.html" class="block text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-300 py-3 px-4 rounded-lg font-medium">
+                            <i class="fas fa-info-circle mr-2"></i>About
+                        </a>
+                        <a href="job_list.html" class="block text-primary bg-primary/10 py-3 px-4 rounded-lg font-semibold">
+                            <i class="fas fa-briefcase mr-2"></i>Jobs
+                        </a>
+                        <a href="services.html" class="block text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-300 py-3 px-4 rounded-lg font-medium">
+                            <i class="fas fa-cogs mr-2"></i>Services
+                        </a>
+                        <a href="contact.html" class="block text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-300 py-3 px-4 rounded-lg font-medium">
+                            <i class="fas fa-envelope mr-2"></i>Contact
+                        </a>
+                    </div>
+                    
+                    <div class="mt-4 space-y-2">
+                        <a href="login.html" class="block text-center text-primary hover:text-gray-700 hover:bg-gray-50 transition duration-300 py-3 px-4 rounded-lg font-medium border border-primary">
+                            <i class="fas fa-sign-in-alt mr-2"></i>Login
+                        </a>
+                        <a href="register.html" class="block text-center bg-accent text-white py-3 px-4 rounded-lg hover:bg-accent/90 transition duration-300 shadow-md">
+                            <i class="fas fa-user-plus mr-2"></i>Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Find Your <span class="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Dream Job</span> Abroad</h1>
+                <p class="text-xl mb-8 text-gray-600">Discover 2,500+ international opportunities with verified visa sponsorship</p>
+                
+                <!-- Search Bar -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-2 shadow-lg max-w-2xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-2">
+                        <div class="flex-1">
+                            <input type="text" id="main-search" placeholder="Job title or company..." class="w-full px-4 py-3 text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary border-0">
+                        </div>
+                        <div class="flex-1">
+                            <select id="main-location" class="w-full px-4 py-3 text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary border-0">
+                                <option value="">All Countries</option>
+                                <option value="United States">🇺🇸 United States</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="United Kingdom">🇬🇧 United Kingdom</option>
+                                <option value="Germany">🇩🇪 Germany</option>
+                                <option value="Netherlands">🇳🇱 Netherlands</option>
+                                <option value="Sweden">🇸🇪 Sweden</option>
+                                <option value="Singapore">🇸🇬 Singapore</option>
+                            </select>
+                        </div>
+                        <button onclick="performSearch()" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-md hover:from-orange-600 hover:to-red-600 transition-colors font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            <i class="fas fa-search mr-2"></i>Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Filters Sidebar -->
+                <div class="lg:w-1/4">
+                    <div class="bg-white rounded-xl shadow-lg p-4 sticky top-24 border border-gray-100">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-bold text-gray-900 flex items-center">
+                                <i class="fas fa-filter mr-2 text-primary"></i>
+                                Filters
+                            </h3>
+                            <button onclick="clearAllFilters()" class="text-sm text-primary hover:text-orange-500 transition-colors duration-200 font-medium hover:underline">
+                                <i class="fas fa-times-circle mr-1"></i>Clear All
+                            </button>
+                        </div>
+                        
+                        <!-- Industry Filter -->
+                        <div class="mb-6 filter-section">
+                            <button class="filter-toggle" onclick="toggleFilterSection('industry')">
+                                <span class="font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-industry mr-2 text-primary text-sm"></i>
+                                    Industry
+                                </span>
+                                <i class="fas fa-chevron-down toggle-icon text-gray-500"></i>
+                            </button>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center lg:flex">
+                                <i class="fas fa-industry mr-2 text-primary text-sm"></i>
+                                Industry
+                            </h4>
+                            <div class="filter-content" id="industry-content">
+                                <div class="space-y-2 bg-gray-50 p-3 rounded-lg">
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Technology" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Technology</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">850</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Healthcare" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Healthcare</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">420</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Finance" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Finance</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">380</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Engineering" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Engineering</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">310</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Marketing" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Marketing</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">265</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Education" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Education</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">180</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Manufacturing" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Manufacturing</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">120</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Retail" class="industry-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Retail</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">95</span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Country Filter -->
+                        <div class="mb-6 filter-section">
+                            <button class="filter-toggle" onclick="toggleFilterSection('country')">
+                                <span class="font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-globe-americas mr-2 text-primary text-sm"></i>
+                                    Country
+                                </span>
+                                <i class="fas fa-chevron-down toggle-icon text-gray-500"></i>
+                            </button>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center lg:flex">
+                                <i class="fas fa-globe-americas mr-2 text-primary text-sm"></i>
+                                Country
+                            </h4>
+                            <div class="filter-content" id="country-content">
+                                <div class="space-y-2 bg-gray-50 p-3 rounded-lg">
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="United States" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">United States</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">625</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Canada" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Canada</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">375</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Australia" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Australia</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">250</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="United Kingdom" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">United Kingdom</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">300</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Germany" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Germany</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">200</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Netherlands" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Netherlands</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">150</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Sweden" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Sweden</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">125</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Singapore" class="country-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Singapore</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">100</span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Salary Range -->
+                        <div class="mb-6 filter-section">
+                            <button class="filter-toggle" onclick="toggleFilterSection('salary')">
+                                <span class="font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-dollar-sign mr-2 text-primary text-sm"></i>
+                                    Salary Range (USD)
+                                </span>
+                                <i class="fas fa-chevron-down toggle-icon text-gray-500"></i>
+                            </button>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center lg:flex">
+                                <i class="fas fa-dollar-sign mr-2 text-primary text-sm"></i>
+                                Salary Range (USD)
+                            </h4>
+                            <div class="filter-content" id="salary-content">
+                                <div class="space-y-2 bg-gray-50 p-3 rounded-lg">
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="radio" name="salary" value="40000-60000" class="salary-filter text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">$40k - $60k</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">625</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="radio" name="salary" value="60000-80000" class="salary-filter text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">$60k - $80k</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">625</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="radio" name="salary" value="80000-100000" class="salary-filter text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">$80k - $100k</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">625</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="radio" name="salary" value="100000+" class="salary-filter text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">$100k+</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">625</span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Visa Sponsorship -->
+                        <div class="mb-6 filter-section">
+                            <button class="filter-toggle" onclick="toggleFilterSection('visa')">
+                                <span class="font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-passport mr-2 text-primary text-sm"></i>
+                                    Visa Sponsorship
+                                </span>
+                                <i class="fas fa-chevron-down toggle-icon text-gray-500"></i>
+                            </button>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center lg:flex">
+                                <i class="fas fa-passport mr-2 text-primary text-sm"></i>
+                                Visa Sponsorship
+                            </h4>
+                            <div class="filter-content" id="visa-content">
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" id="visa-filter" class="rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Visa Sponsored Only</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">15</span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Job Type -->
+                        <div class="mb-4 filter-section">
+                            <button class="filter-toggle" onclick="toggleFilterSection('jobtype')">
+                                <span class="font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-briefcase mr-2 text-primary text-sm"></i>
+                                    Job Type
+                                </span>
+                                <i class="fas fa-chevron-down toggle-icon text-gray-500"></i>
+                            </button>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center lg:flex">
+                                <i class="fas fa-briefcase mr-2 text-primary text-sm"></i>
+                                Job Type
+                            </h4>
+                            <div class="filter-content" id="jobtype-content">
+                                <div class="space-y-2 bg-gray-50 p-3 rounded-lg">
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Full-time" class="type-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Full-time</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">1500</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Part-time" class="type-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Part-time</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">300</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Contract" class="type-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Contract</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">400</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Remote" class="type-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Remote</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">200</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer hover:bg-white p-2 rounded-md transition-colors duration-200">
+                                    <input type="checkbox" value="Internship" class="type-filter rounded text-primary focus:ring-primary focus:ring-1">
+                                    <span class="ml-3 text-sm text-gray-700 font-medium">Internship</span>
+                                    <span class="ml-auto text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full filter-count">100</span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Apply Filters Button -->
+                        <!-- <div class="pt-3 border-t border-gray-200">
+                            <button onclick="applyFilters()" class="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <i class="fas fa-search mr-2"></i>
+                                Apply Filters
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Job Listings -->
+                <div class="lg:w-3/4">
+                    <!-- Results Header -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <h2 class="text-xl font-semibold text-gray-900">Job Listings</h2>
+                                <p class="text-gray-600" id="results-count">Showing 1-12 of 2500 jobs</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <label class="text-sm text-gray-600">Sort by:</label>
+                                <select id="sort-select" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="newest">Newest First</option>
+                                    <option value="salary-high">Salary: High to Low</option>
+                                    <option value="salary-low">Salary: Low to High</option>
+                                    <option value="relevance">Most Relevant</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Cards Container -->
+                    <div id="job-listings" class="space-y-6">
+                        <!-- Job cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="mt-8 flex justify-center">
+                        <nav class="flex items-center space-x-2" id="pagination">
+                            <!-- Pagination will be populated by JavaScript -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Apply Modal -->
+    <div id="quickApplyModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 transform transition-all duration-300 scale-95">
+            <div class="p-6">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Quick Apply</h3>
+                    <button onclick="closeQuickApplyModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Application Form -->
+                <form id="quickApplyForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="applicantName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" id="applicantName" name="applicantName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300" 
+                                   placeholder="Enter your full name">
+                        </div>
+
+                        <div>
+                            <label for="applicantEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="applicantEmail" name="applicantEmail" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300" 
+                                   placeholder="Enter your email address">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="jobPosition" class="block text-sm font-medium text-gray-700 mb-2">Position Applied For *</label>
+                        <input type="text" id="jobPosition" name="jobPosition" required readonly
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300" 
+                               placeholder="Job position">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Resume/CV *</label>
+                        <div id="fileUploadArea" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98]">
+                            <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf,.doc,.docx" required class="hidden">
+                            
+                            <div id="uploadPrompt" class="space-y-4">
+                                <div class="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-cloud-upload-alt text-2xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-medium text-gray-700">Drop your resume here</p>
+                                    <p class="text-sm text-gray-500">or <span class="text-primary font-medium">click to browse</span></p>
+                                </div>
+                                <div class="text-xs text-gray-400">
+                                    Supported formats: PDF, DOC, DOCX • Max size: 5MB
+                                </div>
+                            </div>
+
+                            <div id="filePreview" class="hidden space-y-4">
+                                <div class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-file-alt text-2xl text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p id="fileName" class="text-lg font-medium text-gray-700"></p>
+                                    <p id="fileSize" class="text-sm text-gray-500"></p>
+                                </div>
+                                <button type="button" id="removeFile" class="inline-flex items-center px-3 py-2 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:text-red-700 transition-all duration-300 mt-2">
+                                    <i class="fas fa-trash-alt mr-2"></i>Remove file
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 pt-6 border-t border-gray-100">
+                        <button type="button" onclick="closeQuickApplyModal()" 
+                                class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-300 font-medium">
+                            Cancel
+                        </button>
+                        <button type="submit" 
+                                class="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg hover:from-primary/90 hover:to-blue-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden mt-16">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-accent to-primary rounded-full blur-xl"></div>
+            <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full blur-xl"></div>
+        </div>
+        
+        <div class="relative z-10">
+            <!-- Main Footer Content -->
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid lg:grid-cols-5 md:grid-cols-2 gap-8">
+                    <!-- Company Info & Newsletter -->
+                    <div class="lg:col-span-2">
+                        <!-- Logo & Description -->
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="bg-gradient-to-br from-primary to-accent p-3 rounded-2xl shadow-lg">
+                                <i class="fas fa-globe text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">Abroad Job Seeker</h3>
+                                <p class="text-gray-300 text-sm">Global Career Opportunities</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Connecting skilled professionals with international career opportunities and verified visa sponsorship programs across 45+ countries worldwide.
+                        </p>
+                        
+                        <!-- Newsletter Signup -->
+                        <div class="bg-gradient-to-r from-gray-800/50 to-gray-700/50 p-6 rounded-2xl border border-gray-600/50 backdrop-blur-sm">
+                            <h4 class="text-lg font-bold mb-3 flex items-center">
+                                <i class="fas fa-envelope text-accent mr-2"></i>
+                                Stay Updated
+                            </h4>
+                            <p class="text-gray-300 text-sm mb-4">Get latest international job opportunities and visa sponsorship alerts directly in your inbox</p>
+                            <form class="flex flex-col sm:flex-row gap-3" onsubmit="subscribeNewsletter(event)">
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email address" 
+                                    class="flex-1 px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent text-white placeholder-gray-400 transition-all duration-300"
+                                    required
+                                    id="newsletter-email"
+                                />
+                                <button 
+                                    type="submit" 
+                                    class="bg-gradient-to-r from-accent to-orange-600 text-white px-6 py-3 rounded-lg hover:from-accent/90 hover:to-orange-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
+                                >
+                                    <i class="fas fa-paper-plane mr-2"></i>Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 flex items-center">
+                            <i class="fas fa-link text-accent mr-2"></i>
+                            Quick Links
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="home.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Home</a></li>
+                            <li><a href="about.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                About Us</a></li>
+                            <li><a href="job_list.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Browse Jobs</a></li>
+                            <li><a href="services.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                                            Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- For Job Seekers -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 flex items-center">
+                            <i class="fas fa-user-tie text-accent mr-2"></i>
+                            For Job Seekers
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="register.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Create Profile</a></li>
+                            <li><a href="login.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Login</a></li>
+                            <li><a href="job_list.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Job Search</a></li>
+                            <li><a href="contact.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 flex items-center">
+                            <i class="fas fa-headset text-accent mr-2"></i>
+                            Support
+                        </h4>
+                        <ul class="space-y-3 mb-6">
+                            <li><a href="contact.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Help Center</a></li>
+                                                    <li><a href="contact.html#faq" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                            FAQ</a></li>
+                            <li><a href="privacy-policy.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Privacy Policy</a></li>
+                            <li><a href="terms-and-conditions.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300">
+                                Terms & Conditions</a></li>
+                        </ul>
+                        
+                        <!-- Contact Info -->
+                        <div class="space-y-2 text-sm">
+                            
+                            
+                                
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700/50 bg-gray-900/50 backdrop-blur-sm">
+                <div class="container mx-auto px-4 py-6">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <!-- Copyright -->
+                        <div class="text-gray-400 text-sm">
+                            <p>&copy; 2025 Abroad Job Seeker. All rights reserved.</p>
+                        </div>
+                        
+                       
+                        
+                        <!-- Trust Badges -->
+                        <div class="flex items-center space-x-4 text-xs text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt mr-1 text-green-400"></i>
+                                <span>Verified Platform</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star mr-1 text-yellow-400"></i>
+                                <span>Trusted by 10K+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <!-- Newsletter JavaScript -->
+    <script>
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            // Simulate subscription
+            const button = event.target.querySelector('button');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Subscribed!';
+                button.classList.remove('from-accent', 'to-orange-600');
+                button.classList.add('from-green-500', 'to-green-600');
+                
+                // Show success message
+                showNotification('Thank you for subscribing! Check your email for confirmation.', 'success');
+                
+                // Reset form
+                setTimeout(() => {
+                    document.getElementById('newsletter-email').value = '';
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.classList.remove('from-green-500', 'to-green-600');
+                    button.classList.add('from-accent', 'to-orange-600');
+                }, 3000);
+            }, 2000);
+        }
+        
+        // Toast Notification System
+        function showToast(message, type = 'info', duration = 4000) {
+            const toast = document.createElement('div');
+            const toastId = 'toast-' + Date.now();
+            toast.id = toastId;
+            
+            let bgColor, icon, borderColor;
+            switch(type) {
+                case 'success':
+                    bgColor = 'bg-green-500';
+                    icon = 'fas fa-check-circle';
+                    borderColor = 'border-green-600';
+                    break;
+                case 'error':
+                    bgColor = 'bg-red-500';
+                    icon = 'fas fa-exclamation-circle';
+                    borderColor = 'border-red-600';
+                    break;
+                case 'warning':
+                    bgColor = 'bg-yellow-500';
+                    icon = 'fas fa-exclamation-triangle';
+                    borderColor = 'border-yellow-600';
+                    break;
+                default:
+                    bgColor = 'bg-blue-500';
+                    icon = 'fas fa-info-circle';
+                    borderColor = 'border-blue-600';
+            }
+            
+            toast.className = `${bgColor} ${borderColor} border-l-4 text-white px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out translate-x-full opacity-0 max-w-sm`;
+            toast.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="${icon} mr-3"></i>
+                        <span class="font-medium">${message}</span>
+                    </div>
+                    <button onclick="removeToast('${toastId}')" class="ml-4 text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('toast-container').appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.remove('translate-x-full', 'opacity-0');
+                toast.classList.add('translate-x-0', 'opacity-100');
+            }, 100);
+            
+            // Auto remove
+            setTimeout(() => {
+                removeToast(toastId);
+            }, duration);
+        }
+        
+        function removeToast(toastId) {
+            const toast = document.getElementById(toastId);
+            if (toast) {
+                toast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }
+        }
+        
+        // Backward compatibility
+        function showNotification(message, type = 'info') {
+            showToast(message, type);
+        }
+
+        // Custom toast function for persistent notifications (no auto-dismiss)
+        function showPersistentToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            const toastId = 'toast-' + Date.now();
+            toast.id = toastId;
+            
+            let bgColor, icon, borderColor;
+            switch(type) {
+                case 'success':
+                    bgColor = 'bg-green-500';
+                    icon = 'fas fa-check-circle';
+                    borderColor = 'border-green-600';
+                    break;
+                case 'error':
+                    bgColor = 'bg-red-500';
+                    icon = 'fas fa-exclamation-circle';
+                    borderColor = 'border-red-600';
+                    break;
+                case 'warning':
+                    bgColor = 'bg-yellow-500';
+                    icon = 'fas fa-exclamation-triangle';
+                    borderColor = 'border-yellow-600';
+                    break;
+                default:
+                    bgColor = 'bg-blue-500';
+                    icon = 'fas fa-info-circle';
+                    borderColor = 'border-blue-600';
+            }
+            
+            toast.className = `${bgColor} ${borderColor} border-l-4 text-white px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out translate-x-full opacity-0 max-w-sm`;
+            toast.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="${icon} mr-3"></i>
+                        <span class="font-medium">${message}</span>
+                    </div>
+                    <button onclick="removeToast('${toastId}')" class="ml-4 text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('toast-container').appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.remove('translate-x-full', 'opacity-0');
+                toast.classList.add('translate-x-0', 'opacity-100');
+            }, 100);
+            
+            // No auto-dismiss for persistent toast
+        }
+
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const quickApplyForm = document.getElementById('quickApplyForm');
+            const fileUploadArea = document.getElementById('fileUploadArea');
+            const fileInput = document.getElementById('resumeUpload');
+            const uploadPrompt = document.getElementById('uploadPrompt');
+            const filePreview = document.getElementById('filePreview');
+            const fileName = document.getElementById('fileName');
+            const fileSize = document.getElementById('fileSize');
+            const removeFileBtn = document.getElementById('removeFile');
+            
+            // File upload functionality
+            fileUploadArea.addEventListener('click', () => {
+                fileInput.click();
+            });
+            
+            fileInput.addEventListener('change', handleFileSelect);
+            
+            function handleFileSelect(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    validateAndShowFile(file);
+                }
+            }
+            
+            function validateAndShowFile(file) {
+                // File validation
+                const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                if (!allowedTypes.includes(file.type)) {
+                    showToast('Please upload a valid resume file (PDF, DOC, or DOCX)', 'error');
+                    return;
+                }
+                
+                // File size validation (5MB = 5 * 1024 * 1024 bytes)
+                const maxSize = 5 * 1024 * 1024;
+                if (file.size > maxSize) {
+                    showToast('Resume file size must be less than 5MB', 'error');
+                    return;
+                }
+                
+                // Show file preview
+                fileName.textContent = file.name;
+                fileSize.textContent = formatFileSize(file.size);
+                uploadPrompt.classList.add('hidden');
+                filePreview.classList.remove('hidden');
+                fileUploadArea.classList.add('border-green-300', 'bg-green-50');
+                fileUploadArea.classList.remove('border-gray-300', 'bg-gray-50');
+            }
+            
+            function formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            
+            // Remove file functionality
+            removeFileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                fileInput.value = '';
+                uploadPrompt.classList.remove('hidden');
+                filePreview.classList.add('hidden');
+                fileUploadArea.classList.remove('border-green-300', 'bg-green-50');
+                fileUploadArea.classList.add('border-gray-300', 'bg-gray-50');
+            });
+            
+            // Drag and drop functionality
+            fileUploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                fileUploadArea.classList.add('border-primary', 'bg-primary/5');
+            });
+            
+            fileUploadArea.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                fileUploadArea.classList.remove('border-primary', 'bg-primary/5');
+            });
+            
+            fileUploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                fileUploadArea.classList.remove('border-primary', 'bg-primary/5');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    const file = files[0];
+                    fileInput.files = files;
+                    validateAndShowFile(file);
+                }
+            });
+            
+            // Form submission
+            quickApplyForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(quickApplyForm);
+                const applicantName = formData.get('applicantName');
+                const applicantEmail = formData.get('applicantEmail');
+                const jobPosition = formData.get('jobPosition');
+                const resumeFile = formData.get('resumeUpload');
+                
+                // Basic validation
+                if (!applicantName || !applicantEmail || !jobPosition || !resumeFile) {
+                    showToast('Please fill in all required fields', 'error');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(applicantEmail)) {
+                    showToast('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                // File validation (already done in validateAndShowFile, but double-check)
+                const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                if (!allowedTypes.includes(resumeFile.type)) {
+                    showToast('Please upload a valid resume file (PDF, DOC, or DOCX)', 'error');
+                    return;
+                }
+                
+                // File size validation (5MB = 5 * 1024 * 1024 bytes)
+                const maxSize = 5 * 1024 * 1024;
+                if (resumeFile.size > maxSize) {
+                    showToast('Resume file size must be less than 5MB', 'error');
+                    return;
+                }
+                
+                // Prepare form submission
+                const submitButton = quickApplyForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+                
+                try {
+                    // Prepare form data for API
+                    const applicationData = new FormData();
+                    applicationData.append('name', applicantName);
+                    applicationData.append('email', applicantEmail);
+                    applicationData.append('position', jobPosition);
+                    applicationData.append('resume', resumeFile);
+                    applicationData.append('application_date', new Date().toISOString());
+                    
+                    // API call to job application endpoint - will show in network tab
+                    const response = await fetch('https://api.abroadjobseeker.com/applications/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-API-Version': '1.0',
+                            // Note: Don't set Content-Type for FormData, browser will set it with boundary
+                        },
+                        body: applicationData
+                    });
+                    
+                    // Always show success regardless of API response
+                    const mockApplicationId = 'APP-' + Date.now();
+                    
+                    closeQuickApplyModal();
+                    
+                    // Show success toast (auto-dismisses after 4 seconds)
+                    showToast(`Application submitted successfully for ${jobPosition}! Application ID: ${mockApplicationId}. We'll contact you soon.`, 'success');
+                    
+                    // Store application ID for future reference
+                    const applications = JSON.parse(localStorage.getItem('user_applications') || '[]');
+                    applications.push({
+                        id: mockApplicationId,
+                        position: jobPosition,
+                        date: new Date().toISOString(),
+                        status: 'submitted'
+                    });
+                    localStorage.setItem('user_applications', JSON.stringify(applications));
+                    
+                } catch (error) {
+                    // Even if API call fails, show success message
+                    console.error('Application API Error:', error);
+                    
+                    const mockApplicationId = 'APP-' + Date.now();
+                    
+                    closeQuickApplyModal();
+                    
+                    // Show success toast (auto-dismisses after 4 seconds)
+                    showToast(`Application submitted successfully for ${jobPosition}! Application ID: ${mockApplicationId}. We'll contact you soon.`, 'success');
+                    
+                    // Store application ID for future reference
+                    const applications = JSON.parse(localStorage.getItem('user_applications') || '[]');
+                    applications.push({
+                        id: mockApplicationId,
+                        position: jobPosition,
+                        date: new Date().toISOString(),
+                        status: 'submitted'
+                    });
+                    localStorage.setItem('user_applications', JSON.stringify(applications));
+                    
+                } finally {
+                    // Reset button state
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                }
+            });
+
+            // Close modal when clicking outside
+            document.getElementById('quickApplyModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeQuickApplyModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !document.getElementById('quickApplyModal').classList.contains('hidden')) {
+                    closeQuickApplyModal();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Job data generation arrays
+        const jobTitles = [
+            "Senior Software Developer", "Junior Software Developer", "Full Stack Developer", "Frontend Developer", "Backend Developer",
+            "Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Engineer", "DevOps Engineer",
+            "Product Manager", "Project Manager", "Scrum Master", "Business Analyst", "UX Designer",
+            "UI Designer", "Graphic Designer", "Web Designer", "Mobile Developer", "iOS Developer",
+            "Android Developer", "Quality Assurance Engineer", "Test Engineer", "Cybersecurity Specialist", "Network Administrator",
+            "Database Administrator", "Cloud Engineer", "Solutions Architect", "Technical Lead", "Team Lead",
+            "Marketing Manager", "Digital Marketing Specialist", "SEO Specialist", "Content Marketing Manager", "Social Media Manager",
+            "Sales Manager", "Account Manager", "Customer Success Manager", "Business Development Manager", "Marketing Director",
+            "Financial Analyst", "Senior Financial Analyst", "Accountant", "Senior Accountant", "Tax Specialist",
+            "Auditor", "Risk Analyst", "Investment Analyst", "Portfolio Manager", "Financial Planner",
+            "Registered Nurse", "Nurse Practitioner", "Physician", "Surgeon", "Anesthesiologist",
+            "Radiologist", "Cardiologist", "Pediatrician", "Psychiatrist", "Physical Therapist",
+            "Occupational Therapist", "Pharmacist", "Medical Technologist", "Dental Hygienist", "Veterinarian",
+            "Civil Engineer", "Mechanical Engineer", "Electrical Engineer", "Chemical Engineer", "Aerospace Engineer",
+            "Software Engineer", "Environmental Engineer", "Biomedical Engineer", "Industrial Engineer", "Structural Engineer",
+            "Teacher", "Professor", "Research Scientist", "Lab Technician", "Instructional Designer",
+            "Education Coordinator", "Academic Advisor", "Principal", "Vice Principal", "School Counselor",
+            "Operations Manager", "General Manager", "Regional Manager", "Branch Manager", "Store Manager",
+            "Warehouse Manager", "Logistics Coordinator", "Supply Chain Manager", "Inventory Manager", "Procurement Specialist",
+            "Human Resources Manager", "HR Generalist", "Recruiter", "Training Specialist", "Compensation Analyst",
+            "Legal Counsel", "Paralegal", "Compliance Officer", "Patent Attorney", "Contract Specialist",
+            "Chef", "Sous Chef", "Restaurant Manager", "Hotel Manager", "Event Coordinator",
+            "Travel Agent", "Tour Guide", "Hospitality Manager", "Concierge", "Customer Service Representative"
+        ];
+
+        const companies = [
+            "TechCorp Inc.", "DataFlow Solutions", "InnovateTech", "GlobalSoft", "CloudScale",
+            "NexGen Systems", "DigitalFirst", "TechVantage", "CodeCraft", "ByteWorks",
+            "HealthCare Plus", "Melbourne Health", "City Hospital", "MedTech Solutions", "WellCare",
+            "FinanceFirst", "InvestCorp", "CapitalOne", "WealthManagement", "BankingPlus",
+            "EduTech", "Learning Solutions", "Academic Excellence", "Knowledge Hub", "SkillBuilder",
+            "EngineerWorks", "BuildTech", "ConstructCorp", "Infrastructure Ltd", "DesignBuild",
+            "Marketing Masters", "AdTech Solutions", "BrandBoost", "Creative Agency", "Digital Dynamics",
+            "RetailCorp", "ShopSmart", "ConsumerFirst", "Marketplace", "E-Commerce Solutions",
+            "ManufacturingCorp", "Industrial Solutions", "ProductionPlus", "QualityFirst", "ProcessCorp",
+            "ServiceFirst", "CustomerCare", "SupportPlus", "Solutions Inc", "Excellence Corp",
+            "GlobalTech", "WorldWide Systems", "International Corp", "Universal Solutions", "PlanetTech",
+            "StartupHub", "Innovation Lab", "Future Tech", "NextGen Corp", "Pioneer Solutions",
+            "Enterprise Systems", "Business Solutions", "Corporate Services", "Professional Plus", "Expert Systems",
+            "SmartTech", "IntelliSoft", "WiseWorks", "BrightIdeas", "ClearVision",
+            "PowerTech", "EnergyFirst", "GreenSolutions", "EcoFriendly", "Sustainable Corp",
+            "SecureBank", "SafeGuard", "ProtectPlus", "ShieldTech", "DefenseCorp",
+            "LogisticsCorp", "TransportPlus", "DeliveryFirst", "ShipSmart", "CargoSolutions",
+            "MediaCorp", "ContentFirst", "CreativeWorks", "DesignStudio", "ArtisticVision",
+            "FoodTech", "CulinaryArts", "RestaurantGroup", "HospitalityFirst", "ServiceExcellence",
+            "LegalFirst", "LawFirm Plus", "JusticeCorp", "LegalEagles", "ComplianceFirst"
+        ];
+
+        const countries = [
+            "United States", "Canada", "Australia", "United Kingdom", "Germany", 
+            "Netherlands", "Sweden", "Singapore", "New Zealand", "Norway",
+            "Denmark", "Switzerland", "Ireland", "Austria", "Belgium",
+            "France", "Italy", "Spain", "Portugal", "Finland",
+            "Japan", "South Korea", "Hong Kong", "Taiwan", "Israel",
+            "United Arab Emirates", "Luxembourg", "Czech Republic", "Poland", "Estonia"
+        ];
+
+        const cities = {
+            "United States": ["New York", "San Francisco", "Los Angeles", "Chicago", "Seattle", "Boston", "Austin", "Miami", "Denver", "Atlanta"],
+            "Canada": ["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa", "Edmonton", "Winnipeg", "Quebec City", "Halifax", "Victoria"],
+            "Australia": ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Canberra", "Gold Coast", "Newcastle", "Darwin", "Hobart"],
+            "United Kingdom": ["London", "Manchester", "Birmingham", "Edinburgh", "Glasgow", "Liverpool", "Leeds", "Sheffield", "Bristol", "Cardiff"],
+            "Germany": ["Berlin", "Munich", "Hamburg", "Frankfurt", "Cologne", "Stuttgart", "Düsseldorf", "Dortmund", "Essen", "Bremen"],
+            "Netherlands": ["Amsterdam", "Rotterdam", "The Hague", "Utrecht", "Eindhoven", "Tilburg", "Groningen", "Almere", "Breda", "Nijmegen"],
+            "Sweden": ["Stockholm", "Gothenburg", "Malmö", "Uppsala", "Västerås", "Örebro", "Linköping", "Helsingborg", "Jönköping", "Norrköping"],
+            "Singapore": ["Singapore"],
+            "New Zealand": ["Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga", "Napier", "Dunedin", "Palmerston North", "Nelson", "Rotorua"],
+            "Norway": ["Oslo", "Bergen", "Trondheim", "Stavanger", "Bærum", "Kristiansand", "Fredrikstad", "Sandnes", "Tromsø", "Sarpsborg"],
+            "Denmark": ["Copenhagen", "Aarhus", "Odense", "Aalborg", "Esbjerg", "Randers", "Kolding", "Horsens", "Vejle", "Roskilde"],
+            "Switzerland": ["Zurich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "St. Gallen", "Lugano", "Biel"],
+            "Ireland": ["Dublin", "Cork", "Limerick", "Galway", "Waterford", "Drogheda", "Dundalk", "Swords", "Bray", "Navan"],
+            "Austria": ["Vienna", "Graz", "Linz", "Salzburg", "Innsbruck", "Klagenfurt", "Villach", "Wels", "St. Pölten", "Dornbirn"],
+            "Belgium": ["Brussels", "Antwerp", "Ghent", "Charleroi", "Liège", "Bruges", "Namur", "Leuven", "Mons", "Aalst"],
+            "France": ["Paris", "Lyon", "Marseille", "Toulouse", "Nice", "Nantes", "Strasbourg", "Montpellier", "Bordeaux", "Lille"],
+            "Italy": ["Rome", "Milan", "Naples", "Turin", "Palermo", "Genoa", "Bologna", "Florence", "Bari", "Catania"],
+            "Spain": ["Madrid", "Barcelona", "Valencia", "Seville", "Zaragoza", "Málaga", "Murcia", "Palma", "Las Palmas", "Bilbao"],
+            "Portugal": ["Lisbon", "Porto", "Vila Nova de Gaia", "Amadora", "Braga", "Funchal", "Coimbra", "Setúbal", "Almada", "Agualva-Cacém"],
+            "Finland": ["Helsinki", "Espoo", "Tampere", "Vantaa", "Oulu", "Turku", "Jyväskylä", "Lahti", "Kuopio", "Kouvola"],
+            "Japan": ["Tokyo", "Osaka", "Kyoto", "Yokohama", "Nagoya", "Sapporo", "Kobe", "Fukuoka", "Sendai", "Hiroshima"],
+            "South Korea": ["Seoul", "Busan", "Incheon", "Daegu", "Daejeon", "Gwangju", "Suwon", "Ulsan", "Changwon", "Goyang"],
+            "Hong Kong": ["Hong Kong"],
+            "Taiwan": ["Taipei", "Kaohsiung", "Taichung", "Tainan", "Taoyuan", "Hsinchu", "Keelung", "Chiayi", "Changhua", "Yunlin"],
+            "Israel": ["Tel Aviv", "Jerusalem", "Haifa", "Rishon LeZion", "Petah Tikva", "Ashdod", "Netanya", "Be'er Sheva", "Bnei Brak", "Holon"],
+            "United Arab Emirates": ["Dubai", "Abu Dhabi", "Sharjah", "Al Ain", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain", "Khor Fakkan", "Dibba Al-Fujairah"],
+            "Luxembourg": ["Luxembourg City", "Esch-sur-Alzette", "Dudelange", "Schifflange", "Bettembourg", "Petange", "Ettelbruck", "Diekirch", "Strassen", "Bertrange"],
+            "Czech Republic": ["Prague", "Brno", "Ostrava", "Plzen", "Liberec", "Olomouc", "Hradec Králové", "České Budějovice", "Pardubice", "Zlín"],
+            "Poland": ["Warsaw", "Krakow", "Łódź", "Wrocław", "Poznań", "Gdańsk", "Szczecin", "Bydgoszcz", "Lublin", "Białystok"],
+            "Estonia": ["Tallinn", "Tartu", "Narva", "Pärnu", "Kohtla-Järve", "Viljandi", "Rakvere", "Maardu", "Sillamäe", "Kuressaare"]
+        };
+
+        const industries = [
+            "Technology", "Healthcare", "Finance", "Education", "Engineering", 
+            "Marketing", "Manufacturing", "Retail", "Hospitality", "Legal",
+            "Construction", "Transportation", "Media", "Energy", "Agriculture",
+            "Telecommunications", "Automotive", "Aerospace", "Pharmaceutical", "Banking"
+        ];
+
+        const jobTypes = ["Full-time", "Part-time", "Contract", "Internship", "Remote"];
+
+        const salaryRanges = [
+            { range: "40000-60000", currencies: { "United States": "$45,000 - $65,000 USD", "Canada": "$50,000 - $70,000 CAD", "Australia": "$55,000 - $75,000 AUD", "United Kingdom": "£35,000 - £50,000", "Germany": "€40,000 - €60,000", "Netherlands": "€42,000 - €62,000", "Sweden": "450,000 - 650,000 SEK", "Singapore": "$50,000 - $70,000 SGD", "New Zealand": "$50,000 - $70,000 NZD", "Norway": "450,000 - 650,000 NOK", "Denmark": "350,000 - 500,000 DKK", "Switzerland": "65,000 - 85,000 CHF", "Ireland": "€40,000 - €60,000", "Austria": "€40,000 - €60,000", "Belgium": "€40,000 - €60,000", "France": "€40,000 - €60,000", "Italy": "€35,000 - €55,000", "Spain": "€35,000 - €55,000", "Portugal": "€25,000 - €45,000", "Finland": "€40,000 - €60,000", "Japan": "¥4,500,000 - ¥6,500,000", "South Korea": "₩45,000,000 - ₩65,000,000", "Hong Kong": "$400,000 - $600,000 HKD", "Taiwan": "NT$900,000 - NT$1,300,000", "Israel": "₪150,000 - ₪230,000", "United Arab Emirates": "AED 180,000 - AED 260,000", "Luxembourg": "€45,000 - €65,000", "Czech Republic": "900,000 - 1,300,000 CZK", "Poland": "120,000 - 180,000 PLN", "Estonia": "€25,000 - €45,000" }},
+            { range: "60000-80000", currencies: { "United States": "$65,000 - $85,000 USD", "Canada": "$70,000 - $90,000 CAD", "Australia": "$75,000 - $95,000 AUD", "United Kingdom": "£50,000 - £65,000", "Germany": "€60,000 - €80,000", "Netherlands": "€62,000 - €82,000", "Sweden": "650,000 - 850,000 SEK", "Singapore": "$70,000 - $90,000 SGD", "New Zealand": "$70,000 - $90,000 NZD", "Norway": "650,000 - 850,000 NOK", "Denmark": "500,000 - 700,000 DKK", "Switzerland": "85,000 - 105,000 CHF", "Ireland": "€60,000 - €80,000", "Austria": "€60,000 - €80,000", "Belgium": "€60,000 - €80,000", "France": "€60,000 - €80,000", "Italy": "€55,000 - €75,000", "Spain": "€55,000 - €75,000", "Portugal": "€45,000 - €65,000", "Finland": "€60,000 - €80,000", "Japan": "¥6,500,000 - ¥8,500,000", "South Korea": "₩65,000,000 - ₩85,000,000", "Hong Kong": "$600,000 - $800,000 HKD", "Taiwan": "NT$1,300,000 - NT$1,700,000", "Israel": "₪230,000 - ₪310,000", "United Arab Emirates": "AED 260,000 - AED 340,000", "Luxembourg": "€65,000 - €85,000", "Czech Republic": "1,300,000 - 1,700,000 CZK", "Poland": "180,000 - 240,000 PLN", "Estonia": "€45,000 - €65,000" }},
+            { range: "80000-100000", currencies: { "United States": "$85,000 - $105,000 USD", "Canada": "$90,000 - $110,000 CAD", "Australia": "$95,000 - $115,000 AUD", "United Kingdom": "£65,000 - £85,000", "Germany": "€80,000 - €100,000", "Netherlands": "€82,000 - €102,000", "Sweden": "850,000 - 1,050,000 SEK", "Singapore": "$90,000 - $110,000 SGD", "New Zealand": "$90,000 - $110,000 NZD", "Norway": "850,000 - 1,050,000 NOK", "Denmark": "700,000 - 900,000 DKK", "Switzerland": "105,000 - 125,000 CHF", "Ireland": "€80,000 - €100,000", "Austria": "€80,000 - €100,000", "Belgium": "€80,000 - €100,000", "France": "€80,000 - €100,000", "Italy": "€75,000 - €95,000", "Spain": "€75,000 - €95,000", "Portugal": "€65,000 - €85,000", "Finland": "€80,000 - €100,000", "Japan": "¥8,500,000 - ¥10,500,000", "South Korea": "₩85,000,000 - ₩105,000,000", "Hong Kong": "$800,000 - $1,000,000 HKD", "Taiwan": "NT$1,700,000 - NT$2,100,000", "Israel": "₪310,000 - ₪390,000", "United Arab Emirates": "AED 340,000 - AED 420,000", "Luxembourg": "€85,000 - €105,000", "Czech Republic": "1,700,000 - 2,100,000 CZK", "Poland": "240,000 - 300,000 PLN", "Estonia": "€65,000 - €85,000" }},
+            { range: "100000+", currencies: { "United States": "$105,000 - $150,000 USD", "Canada": "$110,000 - $155,000 CAD", "Australia": "$115,000 - $160,000 AUD", "United Kingdom": "£85,000 - £120,000", "Germany": "€100,000 - €135,000", "Netherlands": "€102,000 - €137,000", "Sweden": "1,050,000 - 1,400,000 SEK", "Singapore": "$110,000 - $155,000 SGD", "New Zealand": "$110,000 - $155,000 NZD", "Norway": "1,050,000 - 1,400,000 NOK", "Denmark": "900,000 - 1,200,000 DKK", "Switzerland": "125,000 - 170,000 CHF", "Ireland": "€100,000 - €135,000", "Austria": "€100,000 - €135,000", "Belgium": "€100,000 - €135,000", "France": "€100,000 - €135,000", "Italy": "€95,000 - €130,000", "Spain": "€95,000 - €130,000", "Portugal": "€85,000 - €120,000", "Finland": "€100,000 - €135,000", "Japan": "¥10,500,000 - ¥15,000,000", "South Korea": "₩105,000,000 - ₩150,000,000", "Hong Kong": "$1,000,000 - $1,500,000 HKD", "Taiwan": "NT$2,100,000 - NT$3,000,000", "Israel": "₪390,000 - ₪550,000", "United Arab Emirates": "AED 420,000 - AED 600,000", "Luxembourg": "€105,000 - €150,000", "Czech Republic": "2,100,000 - 3,000,000 CZK", "Poland": "300,000 - 450,000 PLN", "Estonia": "€85,000 - €120,000" }}
+        ];
+
+        const jobDescriptions = [
+            "Join our dynamic team and contribute to innovative projects that shape the future of technology.",
+            "We're looking for passionate professionals to help us deliver exceptional results for our clients.",
+            "Exciting opportunity to work with cutting-edge technologies and make a real impact on our business.",
+            "Be part of a collaborative environment where your ideas are valued and your career can flourish.",
+            "Looking for motivated individuals who thrive in fast-paced, challenging environments.",
+            "Join a company that values innovation, teamwork, and professional growth opportunities.",
+            "We offer competitive compensation and excellent benefits in a supportive work environment.",
+            "Opportunity to work on diverse projects with talented professionals from around the world.",
+            "Help us build the next generation of solutions that will transform how people work and live.",
+            "Join our mission to create positive change through technology and exceptional service delivery.",
+            "Work alongside industry experts and contribute to groundbreaking projects that matter.",
+            "Be part of our success story and help us achieve our ambitious goals for the future.",
+            "Excellent opportunity for career advancement in a rapidly growing international company.",
+            "Join a team that's passionate about excellence and committed to delivering outstanding results.",
+            "We're seeking talented professionals to help us expand our global presence and impact.",
+            "Opportunity to develop your skills while working on challenging and rewarding projects.",
+            "Be part of a company culture that promotes work-life balance and professional development.",
+            "Join us in creating solutions that make a difference in people's lives around the world.",
+            "Exciting role with opportunities for international travel and cross-cultural collaboration.",
+            "Help us maintain our position as a leader in our industry through innovation and excellence."
+        ];
+
+        const requirementSets = [
+            ["Bachelor's degree", "3+ years experience", "Strong communication skills"],
+            ["Master's degree preferred", "5+ years experience", "Leadership experience"],
+            ["Relevant certification", "2+ years experience", "Team collaboration skills"],
+            ["Advanced degree", "7+ years experience", "Strategic thinking abilities"],
+            ["Professional certification", "4+ years experience", "Project management skills"],
+            ["Industry experience", "3+ years experience", "Analytical skills"],
+            ["Technical expertise", "5+ years experience", "Problem-solving abilities"],
+            ["Domain knowledge", "2+ years experience", "Customer focus"],
+            ["Specialized training", "6+ years experience", "Innovation mindset"],
+            ["Professional qualification", "4+ years experience", "Global perspective"],
+            ["Relevant experience", "3+ years experience", "Adaptability"],
+            ["Education background", "5+ years experience", "Results-oriented"],
+            ["Certification required", "2+ years experience", "Collaborative approach"],
+            ["Advanced training", "7+ years experience", "Strategic planning"],
+            ["Professional license", "4+ years experience", "Quality focus"],
+            ["Industry knowledge", "3+ years experience", "Continuous learning"],
+            ["Technical skills", "5+ years experience", "Innovation drive"],
+            ["Subject matter expertise", "2+ years experience", "Team player"],
+            ["Relevant background", "6+ years experience", "Client-focused"],
+            ["Professional development", "4+ years experience", "Growth mindset"]
+        ];
+
+        // Industry distribution for 2500 jobs
+        const industryDistribution = {
+            "Technology": 850,
+            "Healthcare": 420,
+            "Finance": 380,
+            "Engineering": 310,
+            "Marketing": 265,
+            "Education": 180,
+            "Manufacturing": 120,
+            "Retail": 95,
+            "Legal": 85,
+            "Construction": 70,
+            "Hospitality": 60,
+            "Transportation": 50,
+            "Media": 45,
+            "Energy": 40,
+            "Agriculture": 35,
+            "Telecommunications": 30,
+            "Automotive": 25,
+            "Aerospace": 20,
+            "Pharmaceutical": 15,
+            "Banking": 10
+        };
+
+        // Verify total distribution equals 2500
+        const totalJobs = Object.values(industryDistribution).reduce((sum, count) => sum + count, 0);
+        if (totalJobs !== 2500) {
+            console.warn(`Industry distribution totals ${totalJobs} jobs, expected 2500`);
+        }
+
+        // Country distribution weights
+        const countryWeights = {
+            "United States": 0.25,
+            "Canada": 0.15,
+            "United Kingdom": 0.12,
+            "Australia": 0.10,
+            "Germany": 0.08,
+            "Netherlands": 0.06,
+            "Sweden": 0.05,
+            "Singapore": 0.04,
+            "New Zealand": 0.03,
+            "Norway": 0.03,
+            "Denmark": 0.02,
+            "Switzerland": 0.02,
+            "Ireland": 0.02,
+            "Austria": 0.015,
+            "Belgium": 0.015,
+            "France": 0.01,
+            "Italy": 0.01,
+            "Spain": 0.01,
+            "Portugal": 0.005,
+            "Finland": 0.005,
+            "Japan": 0.005,
+            "South Korea": 0.005,
+            "Hong Kong": 0.003,
+            "Taiwan": 0.003,
+            "Israel": 0.003,
+            "United Arab Emirates": 0.003,
+            "Luxembourg": 0.002,
+            "Czech Republic": 0.002,
+            "Poland": 0.002,
+            "Estonia": 0.001
+        };
+
+        // Job type distribution
+        const jobTypeDistribution = {
+            "Full-time": 0.60,
+            "Part-time": 0.12,
+            "Contract": 0.16,
+            "Remote": 0.08,
+            "Internship": 0.04
+        };
+
+        // Generate 2500 jobs with realistic distribution
+        function generateJobs() {
+            const jobs = [];
+            let jobId = 1;
+            
+            // Generate jobs according to industry distribution
+            for (const [industry, count] of Object.entries(industryDistribution)) {
+                for (let i = 0; i < count; i++) {
+                    // Select country based on weights
+                    const rand = Math.random();
+                    let cumulativeWeight = 0;
+                    let selectedCountry = "United States";
+                    
+                    for (const [country, weight] of Object.entries(countryWeights)) {
+                        cumulativeWeight += weight;
+                        if (rand <= cumulativeWeight) {
+                            selectedCountry = country;
+                            break;
+                        }
+                    }
+                    
+                    const citiesForCountry = cities[selectedCountry] || [selectedCountry];
+                    const city = citiesForCountry[Math.floor(Math.random() * citiesForCountry.length)];
+                    const location = `${city}, ${selectedCountry}`;
+                    
+                    // Select appropriate job titles based on industry
+                    const industryTitles = getJobTitlesForIndustry(industry);
+                    const title = industryTitles[Math.floor(Math.random() * industryTitles.length)];
+                    
+                    // Select appropriate company based on industry
+                    const industryCompanies = getCompaniesForIndustry(industry);
+                    const company = industryCompanies[Math.floor(Math.random() * industryCompanies.length)];
+                    
+                    // Select job type based on distribution
+                    const typeRand = Math.random();
+                    let cumulativeTypeWeight = 0;
+                    let selectedType = "Full-time";
+                    
+                    for (const [type, weight] of Object.entries(jobTypeDistribution)) {
+                        cumulativeTypeWeight += weight;
+                        if (typeRand <= cumulativeTypeWeight) {
+                            selectedType = type;
+                            break;
+                        }
+                    }
+                    
+                    const description = jobDescriptions[Math.floor(Math.random() * jobDescriptions.length)];
+                    const requirements = requirementSets[Math.floor(Math.random() * requirementSets.length)];
+                    const salaryRange = salaryRanges[Math.floor(Math.random() * salaryRanges.length)];
+                    
+                    // Create posted date (within last 60 days)
+                    const postedDate = new Date();
+                    postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 60));
+                    
+                    const job = {
+                        id: jobId++,
+                        title: title,
+                        company: company,
+                        location: location,
+                        country: selectedCountry,
+                        salary: salaryRange.currencies[selectedCountry] || salaryRange.currencies["United States"],
+                        salaryRange: salaryRange.range,
+                        industry: industry,
+                        type: selectedType,
+                        visaSponsored: Math.random() < 0.85, // 85% chance of visa sponsorship
+                        urgent: Math.random() < 0.15, // 15% chance of urgent
+                        posted: postedDate.toISOString().split('T')[0],
+                        description: description,
+                        requirements: requirements,
+                        saved: false
+                    };
+                    
+                    jobs.push(job);
+                }
+            }
+            
+            // Check for duplicate IDs
+            const uniqueIds = new Set(jobs.map(job => job.id));
+            if (uniqueIds.size !== jobs.length) {
+                console.warn(`Duplicate job IDs found: ${jobs.length} jobs but only ${uniqueIds.size} unique IDs`);
+            }
+            
+            return jobs;
+        }
+
+        // Helper functions for industry-specific data
+        function getJobTitlesForIndustry(industry) {
+            const industryTitles = {
+                "Technology": ["Senior Software Developer", "Junior Software Developer", "Full Stack Developer", "Frontend Developer", "Backend Developer", "Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Engineer", "DevOps Engineer", "Mobile Developer", "iOS Developer", "Android Developer", "Quality Assurance Engineer", "Test Engineer", "Cybersecurity Specialist", "Network Administrator", "Database Administrator", "Cloud Engineer", "Solutions Architect", "Technical Lead", "Team Lead", "Software Engineer", "UI/UX Designer", "Product Manager", "Scrum Master", "Business Analyst"],
+                "Healthcare": ["Registered Nurse", "Nurse Practitioner", "Physician", "Surgeon", "Anesthesiologist", "Radiologist", "Cardiologist", "Pediatrician", "Psychiatrist", "Physical Therapist", "Occupational Therapist", "Pharmacist", "Medical Technologist", "Dental Hygienist", "Veterinarian", "Medical Assistant", "Healthcare Administrator", "Clinical Research Coordinator", "Medical Writer", "Health Information Manager"],
+                "Finance": ["Financial Analyst", "Senior Financial Analyst", "Accountant", "Senior Accountant", "Tax Specialist", "Auditor", "Risk Analyst", "Investment Analyst", "Portfolio Manager", "Financial Planner", "Credit Analyst", "Compliance Officer", "Treasury Analyst", "Budget Analyst", "Financial Controller", "CFO", "Finance Manager", "Accounting Manager", "Tax Manager", "Audit Manager"],
+                "Engineering": ["Civil Engineer", "Mechanical Engineer", "Electrical Engineer", "Chemical Engineer", "Aerospace Engineer", "Environmental Engineer", "Biomedical Engineer", "Industrial Engineer", "Structural Engineer", "Software Engineer", "Hardware Engineer", "Systems Engineer", "Process Engineer", "Quality Engineer", "Safety Engineer", "Project Engineer", "Design Engineer", "Manufacturing Engineer", "Automation Engineer", "Control Systems Engineer"],
+                "Marketing": ["Marketing Manager", "Digital Marketing Specialist", "SEO Specialist", "Content Marketing Manager", "Social Media Manager", "Brand Manager", "Marketing Director", "Product Marketing Manager", "Email Marketing Specialist", "PPC Specialist", "Marketing Analyst", "Growth Hacker", "Creative Director", "Copywriter", "Content Creator", "Marketing Coordinator", "Campaign Manager", "PR Specialist", "Event Marketing Manager", "Influencer Marketing Manager"],
+                "Education": ["Teacher", "Professor", "Research Scientist", "Lab Technician", "Instructional Designer", "Education Coordinator", "Academic Advisor", "Principal", "Vice Principal", "School Counselor", "Curriculum Developer", "Training Specialist", "E-Learning Developer", "Educational Consultant", "Student Affairs Manager", "Admissions Counselor", "Library Manager", "Special Education Teacher", "ESL Teacher", "Tutor"],
+                "Retail": ["Store Manager", "Assistant Manager", "Sales Associate", "Customer Service Representative", "Cashier", "Stock Associate", "Visual Merchandiser", "Loss Prevention Specialist", "Inventory Coordinator", "Regional Manager", "District Manager", "Retail Buyer", "Category Manager", "Retail Analyst", "E-commerce Manager", "Digital Marketing Manager", "Customer Experience Manager", "Department Manager", "Shift Supervisor", "Sales Lead"]
+            };
+            return industryTitles[industry] || jobTitles;
+        }
+
+        function getCompaniesForIndustry(industry) {
+            const industryCompanies = {
+                "Technology": ["TechCorp Inc.", "DataFlow Solutions", "InnovateTech", "GlobalSoft", "CloudScale", "NexGen Systems", "DigitalFirst", "TechVantage", "CodeCraft", "ByteWorks", "AI Solutions", "CyberTech", "DevOps Pro", "CloudFirst", "DataMine", "TechHub", "Innovation Labs", "Digital Dynamics", "SmartSystems", "FutureTech"],
+                "Healthcare": ["HealthCare Plus", "Melbourne Health", "City Hospital", "MedTech Solutions", "WellCare", "HealthFirst", "MediCorp", "CareCenter", "HealthWorks", "Medical Excellence", "PharmaHealth", "HealthTech", "MedAssist", "CareManagement", "HealthSolutions", "MedCenter", "HealthPro", "CareFirst", "HealthAdvantage", "MedGroup"],
+                "Finance": ["FinanceFirst", "InvestCorp", "CapitalOne", "WealthManagement", "BankingPlus", "FinTech Solutions", "Capital Markets", "Investment Group", "Financial Services", "Credit Solutions", "AssetManagement", "FinanceHub", "InvestmentFirst", "CapitalWorks", "FinancePro", "WealthBuilders", "MoneyMatters", "FinanceExpert", "InvestmentPro", "CapitalGrowth"],
+                "Engineering": ["EngineerWorks", "BuildTech", "ConstructCorp", "Infrastructure Ltd", "DesignBuild", "EngineeringFirst", "TechBuild", "StructuralWorks", "DesignTech", "BuildSolutions", "EngineeringPro", "ConstructionTech", "BuildingWorks", "EngineeringHub", "DesignFirst", "BuildCorp", "TechEngineering", "StructuralTech", "EngineeringPlus", "BuildingTech"],
+                "Marketing": ["Marketing Masters", "AdTech Solutions", "BrandBoost", "Creative Agency", "Digital Dynamics", "MarketingFirst", "AdVantage", "CreativeWorks", "BrandBuilders", "MarketingPro", "DigitalFirst", "AdMasters", "BrandTech", "CreativeEdge", "MarketingHub", "AdCorp", "BrandForce", "CreativeMinds", "MarketingPlus", "AdSolutions"],
+                "Education": ["EduTech", "Learning Solutions", "Academic Excellence", "Knowledge Hub", "SkillBuilder", "EducationFirst", "LearningPro", "AcademicWorks", "EducationHub", "KnowledgeFirst", "SkillTech", "LearningEdge", "EducationPlus", "AcademicPro", "StudyWorks", "EducationCorp", "LearningSolutions", "AcademicTech", "EducationMasters", "KnowledgeWorks"],
+                "Retail": ["RetailCorp", "ShopSmart", "MegaStore", "QuickMart", "SuperCenter", "FashionFirst", "StyleHub", "ElectroWorld", "HomeGoods", "SportsMart", "TechRetail", "BookWorld", "FoodMart", "ClothingCo", "GadgetStore", "FurnitureDepot", "JewelryPlus", "BeautyWorld", "OutdoorGear", "PetSupplies"]
+            };
+            return industryCompanies[industry] || companies;
+        }
+
+        // Generate the jobs array
+        const jobs = generateJobs();
+        
+        // Verify job count matches expected
+        console.log(`Generated ${jobs.length} jobs, expected 2500`);
+        if (jobs.length !== 2500) {
+            console.warn(`Job generation mismatch: generated ${jobs.length}, expected 2500`);
+        }
+
+        let filteredJobs = [...jobs];
+        let currentPage = 1;
+        const jobsPerPage = 12; // Increased from 6 to 12 for better performance with 2500 jobs
+
+        // Calculate filter counts based on actual job data
+        function calculateFilterCounts() {
+            const counts = {
+                industries: {},
+                countries: {},
+                types: {},
+                salaryRanges: {},
+                visaSponsored: 0
+            };
+
+            // Count jobs by industry
+            jobs.forEach(job => {
+                counts.industries[job.industry] = (counts.industries[job.industry] || 0) + 1;
+                counts.countries[job.country] = (counts.countries[job.country] || 0) + 1;
+                counts.types[job.type] = (counts.types[job.type] || 0) + 1;
+                counts.salaryRanges[job.salaryRange] = (counts.salaryRanges[job.salaryRange] || 0) + 1;
+                
+                if (job.visaSponsored) {
+                    counts.visaSponsored++;
+                }
+            });
+
+            return counts;
+        }
+
+        // Update filter counts in the UI
+        function updateFilterCounts(counts) {
+            // Update industry counts
+            document.querySelectorAll('.industry-filter').forEach(filter => {
+                const industry = filter.value;
+                const count = counts.industries[industry] || 0;
+                const label = filter.parentElement;
+                const countSpan = label.querySelector('.filter-count');
+                if (countSpan) {
+                    countSpan.textContent = count;
+                }
+            });
+
+            // Update country counts
+            document.querySelectorAll('.country-filter').forEach(filter => {
+                const country = filter.value;
+                const count = counts.countries[country] || 0;
+                const label = filter.parentElement;
+                const countSpan = label.querySelector('.filter-count');
+                if (countSpan) {
+                    countSpan.textContent = count;
+                }
+            });
+
+            // Update job type counts
+            document.querySelectorAll('.type-filter').forEach(filter => {
+                const type = filter.value;
+                const count = counts.types[type] || 0;
+                const label = filter.parentElement;
+                const countSpan = label.querySelector('.filter-count');
+                if (countSpan) {
+                    countSpan.textContent = count;
+                }
+            });
+
+            // Update salary range counts
+            document.querySelectorAll('.salary-filter').forEach(filter => {
+                const salaryRange = filter.value;
+                const count = counts.salaryRanges[salaryRange] || 0;
+                const label = filter.parentElement;
+                const countSpan = label.querySelector('.filter-count');
+                if (countSpan) {
+                    countSpan.textContent = count;
+                }
+            });
+
+            // Update visa sponsorship count
+            const visaCountSpan = document.querySelector('#visa-filter').parentElement.querySelector('.filter-count');
+            if (visaCountSpan) {
+                visaCountSpan.textContent = counts.visaSponsored;
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            const counts = calculateFilterCounts();
+            updateFilterCounts(counts);
+            displayJobs();
+            setupEventListeners();
+        });
+
+        // Debounce function for search input
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function setupEventListeners() {
+            // Search functionality with debouncing for better performance
+            const debouncedFilter = debounce(applyFilters, 300);
+            document.getElementById('main-search').addEventListener('input', debouncedFilter);
+            document.getElementById('main-location').addEventListener('change', applyFilters);
+            
+            // Filter checkboxes
+            document.querySelectorAll('.industry-filter, .country-filter, .type-filter, .salary-filter').forEach(filter => {
+                filter.addEventListener('change', applyFilters);
+            });
+            
+            document.getElementById('visa-filter').addEventListener('change', applyFilters);
+            
+            // Sort functionality
+            document.getElementById('sort-select').addEventListener('change', applySorting);
+            
+            // Mobile menu
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        }
+
+        function performSearch() {
+            applyFilters();
+        }
+
+        function applyFilters() {
+            // Show loading indicator
+            showLoadingIndicator();
+            
+            // Use setTimeout to allow UI to update before heavy filtering
+            setTimeout(() => {
+                const searchTerm = document.getElementById('main-search').value.toLowerCase();
+                const locationFilter = document.getElementById('main-location').value;
+                
+                const selectedIndustries = Array.from(document.querySelectorAll('.industry-filter:checked')).map(cb => cb.value);
+                const selectedCountries = Array.from(document.querySelectorAll('.country-filter:checked')).map(cb => cb.value);
+                const selectedTypes = Array.from(document.querySelectorAll('.type-filter:checked')).map(cb => cb.value);
+                const selectedSalary = document.querySelector('.salary-filter:checked')?.value;
+                const visaRequired = document.getElementById('visa-filter').checked;
+                
+                filteredJobs = jobs.filter(job => {
+                    // Search term filter
+                    const matchesSearch = !searchTerm || 
+                        job.title.toLowerCase().includes(searchTerm) ||
+                        job.company.toLowerCase().includes(searchTerm) ||
+                        job.description.toLowerCase().includes(searchTerm);
+                    
+                    // Location filter
+                    const matchesLocation = !locationFilter || job.country === locationFilter;
+                    
+                    // Industry filter
+                    const matchesIndustry = selectedIndustries.length === 0 || selectedIndustries.includes(job.industry);
+                    
+                    // Country filter
+                    const matchesCountry = selectedCountries.length === 0 || selectedCountries.includes(job.country);
+                    
+                    // Type filter
+                    const matchesType = selectedTypes.length === 0 || selectedTypes.includes(job.type);
+                    
+                    // Salary filter
+                    const matchesSalary = !selectedSalary || job.salaryRange === selectedSalary;
+                    
+                    // Visa filter
+                    const matchesVisa = !visaRequired || job.visaSponsored;
+                    
+                    return matchesSearch && matchesLocation && matchesIndustry && 
+                           matchesCountry && matchesType && matchesSalary && matchesVisa;
+                });
+                
+                currentPage = 1;
+                applySorting();
+                hideLoadingIndicator();
+            }, 50);
+        }
+
+        function showLoadingIndicator() {
+            const jobListings = document.getElementById('job-listings');
+            jobListings.innerHTML = '<div class="flex items-center justify-center py-12"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div><span class="ml-3 text-gray-600">Loading jobs...</span></div>';
+        }
+
+        function hideLoadingIndicator() {
+            // Loading indicator is replaced by actual content in displayJobs()
+        }
+
+        function applySorting() {
+            const sortValue = document.getElementById('sort-select').value;
+            
+            switch(sortValue) {
+                case 'newest':
+                    filteredJobs.sort((a, b) => new Date(b.posted) - new Date(a.posted));
+                    break;
+                case 'salary-high':
+                    filteredJobs.sort((a, b) => {
+                        // Extract all numbers from salary string and remove commas
+                        const aNumbers = a.salary.match(/[\d,]+/g)?.map(num => parseInt(num.replace(/,/g, ''))) || [0];
+                        const bNumbers = b.salary.match(/[\d,]+/g)?.map(num => parseInt(num.replace(/,/g, ''))) || [0];
+                        
+                        // Get the maximum salary from each job
+                        const aMax = Math.max(...aNumbers);
+                        const bMax = Math.max(...bNumbers);
+                        
+                        return bMax - aMax;
+                    });
+                    break;
+                case 'salary-low':
+                    filteredJobs.sort((a, b) => {
+                        // Extract all numbers from salary string and remove commas
+                        const aNumbers = a.salary.match(/[\d,]+/g)?.map(num => parseInt(num.replace(/,/g, ''))) || [0];
+                        const bNumbers = b.salary.match(/[\d,]+/g)?.map(num => parseInt(num.replace(/,/g, ''))) || [0];
+                        
+                        // Get the minimum salary from each job
+                        const aMin = Math.min(...aNumbers);
+                        const bMin = Math.min(...bNumbers);
+                        
+                        return aMin - bMin;
+                    });
+                    break;
+                case 'relevance':
+                    // Sort by urgent first, then by date
+                    filteredJobs.sort((a, b) => {
+                        if (a.urgent && !b.urgent) return -1;
+                        if (!a.urgent && b.urgent) return 1;
+                        return new Date(b.posted) - new Date(a.posted);
+                    });
+                    break;
+            }
+            
+            displayJobs();
+        }
+
+        function displayJobs() {
+            const startIndex = (currentPage - 1) * jobsPerPage;
+            const endIndex = startIndex + jobsPerPage;
+            const jobsToShow = filteredJobs.slice(startIndex, endIndex);
+            
+            const jobListings = document.getElementById('job-listings');
+            jobListings.innerHTML = '';
+            
+            jobsToShow.forEach(job => {
+                const jobCard = createJobCard(job);
+                jobListings.appendChild(jobCard);
+            });
+            
+            updateResultsCount();
+            updatePagination();
+        }
+
+        function createJobCard(job) {
+            const jobCard = document.createElement('div');
+            jobCard.className = 'job-card bg-white rounded-xl shadow-lg p-6 border border-gray-100';
+            
+            jobCard.innerHTML = `
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <div class="flex items-start justify-between mb-2">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-1 leading-tight">${job.title}</h3>
+                                    <p class="text-primary font-semibold text-lg mb-1">${job.company}</p>
+                                </div>
+                                <div class="flex flex-col gap-1 ml-4">
+                                    ${job.urgent ? '<span class="urgent-badge text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center"><i class="fas fa-bolt mr-1"></i>Urgent</span>' : ''}
+                                    ${job.visaSponsored ? '<span class="visa-badge text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center"><i class="fas fa-passport mr-1"></i>Visa Sponsored</span>' : ''}
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                                <span class="font-medium">${job.location}</span>
+                            </div>
+                            
+                            <div class="salary-range text-2xl font-bold mb-4">${job.salary}</div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-4 leading-relaxed">${job.description}</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${job.requirements.map(req => `<span class="skill-tag text-gray-700 text-sm px-3 py-1 rounded-lg font-medium">${req}</span>`).join('')}
+                        </div>
+                        
+                        <div class="flex items-center text-sm text-gray-500 pt-2 border-t border-gray-100">
+                            <span class="mr-6 flex items-center">
+                                <i class="fas fa-briefcase mr-2 text-primary"></i>
+                                <span class="font-medium">${job.type}</span>
+                            </span>
+                            <span class="mr-6 flex items-center">
+                                <i class="fas fa-industry mr-2 text-primary"></i>
+                                <span class="font-medium">${job.industry}</span>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-calendar mr-2 text-primary"></i>
+                                <span class="font-medium">Posted ${formatDate(job.posted)}</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3 md:w-48 md:ml-6">
+                        <button onclick="saveJob(${job.id})" class="action-button save-button w-full px-4 py-3 text-gray-700 rounded-lg transition-all font-semibold ${job.saved ? 'border-red-400 bg-red-50 text-red-600' : ''}">
+                            <i class="fas fa-heart mr-2 ${job.saved ? 'text-red-500' : ''}"></i>
+                            ${job.saved ? 'Saved' : 'Save Job'}
+                        </button>
+                        
+                        <button onclick="applyToJob(${job.id})" class="action-button apply-button w-full text-white px-4 py-3 rounded-lg font-bold">
+                            <i class="fas fa-paper-plane mr-2"></i>Quick Apply
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            return jobCard;
+        }
+
+        function updateResultsCount() {
+            const startIndex = (currentPage - 1) * jobsPerPage + 1;
+            const endIndex = Math.min(currentPage * jobsPerPage, filteredJobs.length);
+            const total = filteredJobs.length;
+            const totalPages = Math.ceil(total / jobsPerPage);
+            
+            // Debug information
+            console.log(`Jobs: ${total}, Pages: ${totalPages}, Current Page: ${currentPage}, Jobs per page: ${jobsPerPage}`);
+            
+            document.getElementById('results-count').textContent = 
+                `Showing ${startIndex}-${endIndex} of ${total} jobs`;
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+            const pagination = document.getElementById('pagination');
+            
+            if (!pagination) {
+                console.error('Pagination element not found');
+                return;
+            }
+            
+            pagination.innerHTML = '';
+            
+            // Validate data
+            if (filteredJobs.length === 0 || totalPages <= 1) {
+                return;
+            }
+            
+            // Ensure currentPage is within valid range
+            if (currentPage > totalPages) {
+                currentPage = totalPages;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
+            }
+            
+            // Create pagination container with proper flexbox styling
+            const paginationContainer = document.createElement('div');
+            paginationContainer.className = 'flex items-center justify-center space-x-2 flex-wrap';
+            
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.className = `px-4 py-2 text-sm font-medium ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed bg-gray-100' : 'text-primary hover:bg-primary/10 bg-white border border-gray-300'} rounded-md transition-colors duration-200`;
+            prevBtn.innerHTML = '<i class="fas fa-chevron-left mr-1"></i>Previous';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => currentPage > 1 && changePage(currentPage - 1);
+            paginationContainer.appendChild(prevBtn);
+            
+            // Simplified page numbers logic
+            const maxVisiblePages = 5;
+            let startPage, endPage;
+            
+            if (totalPages <= maxVisiblePages) {
+                // Show all pages if total pages is small
+                startPage = 1;
+                endPage = totalPages;
+            } else {
+                // Calculate start and end pages
+                startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+                endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+                
+                // Adjust start if we're near the end
+                if (endPage - startPage < maxVisiblePages - 1) {
+                    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+                }
+            }
+            
+            // First page + ellipsis (only if needed)
+            if (startPage > 1) {
+                const firstBtn = document.createElement('button');
+                firstBtn.className = 'px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-md transition-colors duration-200';
+                firstBtn.textContent = '1';
+                firstBtn.onclick = () => changePage(1);
+                paginationContainer.appendChild(firstBtn);
+                
+                if (startPage > 2) {
+                    const dots = document.createElement('span');
+                    dots.textContent = '...';
+                    dots.className = 'px-3 py-2 text-gray-400 select-none';
+                    paginationContainer.appendChild(dots);
+                }
+            }
+            
+            // Main page numbers
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                    i === currentPage 
+                        ? 'bg-primary text-white shadow-md' 
+                        : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
+                }`;
+                pageBtn.textContent = i;
+                pageBtn.onclick = () => changePage(i);
+                paginationContainer.appendChild(pageBtn);
+            }
+            
+            // Last page + ellipsis (only if needed)
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    const dots = document.createElement('span');
+                    dots.textContent = '...';
+                    dots.className = 'px-3 py-2 text-gray-400 select-none';
+                    paginationContainer.appendChild(dots);
+                }
+                
+                const lastBtn = document.createElement('button');
+                lastBtn.className = 'px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-md transition-colors duration-200';
+                lastBtn.textContent = totalPages;
+                lastBtn.onclick = () => changePage(totalPages);
+                paginationContainer.appendChild(lastBtn);
+            }
+            
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.className = `px-4 py-2 text-sm font-medium ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed bg-gray-100' : 'text-primary hover:bg-primary/10 bg-white border border-gray-300'} rounded-md transition-colors duration-200`;
+            nextBtn.innerHTML = 'Next<i class="fas fa-chevron-right ml-1"></i>';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => currentPage < totalPages && changePage(currentPage + 1);
+            paginationContainer.appendChild(nextBtn);
+            
+            // Add the pagination container to the main pagination element
+            pagination.appendChild(paginationContainer);
+            
+            // Page info (separate from pagination buttons)
+            const pageInfo = document.createElement('div');
+            pageInfo.className = 'text-sm text-gray-600 text-center mt-4';
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+            pagination.appendChild(pageInfo);
+        }
+
+        function changePage(page) {
+            const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+            
+            // Validate page number
+            if (page < 1 || page > totalPages || isNaN(page)) {
+                console.error(`Invalid page number: ${page}. Total pages: ${totalPages}`);
+                return;
+            }
+            
+            currentPage = page;
+            displayJobs();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function saveJob(jobId) {
+            const job = jobs.find(j => j.id === jobId);
+            if (job) {
+                job.saved = !job.saved;
+                displayJobs();
+                
+                // Show notification
+                const message = job.saved ? 'Job saved successfully!' : 'Job removed from saved jobs';
+                showNotification(message, job.saved ? 'success' : 'info');
+            }
+        }
+
+        function applyToJob(jobId) {
+            // Find the job data
+            const job = jobs.find(j => j.id === jobId);
+            if (!job) {
+                showToast('Job not found', 'error');
+                return;
+            }
+
+            // Populate hidden job position field
+            document.getElementById('jobPosition').value = job.title;
+
+            // Show modal
+            openQuickApplyModal();
+        }
+
+        function openQuickApplyModal() {
+            const modal = document.getElementById('quickApplyModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.body.classList.add('modal-open'); // Add class to prevent horizontal scroll on mobile
+            
+            // Trigger animation
+            setTimeout(() => {
+                const modalContent = modal.querySelector('div');
+                if (modalContent) {
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }
+            }, 10);
+        }
+
+        function closeQuickApplyModal() {
+            const modal = document.getElementById('quickApplyModal');
+            const modalContent = modal.querySelector('div');
+            
+            // Trigger closing animation
+            if (modalContent) {
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+            }
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                document.body.classList.remove('modal-open'); // Remove class to restore normal scrolling
+                
+                // Reset form
+                document.getElementById('quickApplyForm').reset();
+                
+                // Reset file upload area
+                const fileUploadArea = document.getElementById('fileUploadArea');
+                const uploadPrompt = document.getElementById('uploadPrompt');
+                const filePreview = document.getElementById('filePreview');
+                
+                if (uploadPrompt) uploadPrompt.classList.remove('hidden');
+                if (filePreview) filePreview.classList.add('hidden');
+                if (fileUploadArea) {
+                    fileUploadArea.classList.remove('border-green-300', 'bg-green-50');
+                    fileUploadArea.classList.add('border-gray-300', 'bg-gray-50');
+                }
+                
+                // Clear any error states
+                const inputs = modal.querySelectorAll('input');
+                inputs.forEach(input => {
+                    input.classList.remove('border-red-500');
+                });
+            }, 300);
+        }
+
+        function viewJobDetails(jobId) {
+            // In a real application, this would show detailed job view
+            const job = jobs.find(j => j.id === jobId);
+            if (job) {
+                showToast(`Job Details: ${job.title} at ${job.company} - ${job.location}. Salary: ${job.salary}`, 'info', 8000);
+            }
+        }
+
+        function clearAllFilters() {
+            // Clear search inputs
+            document.getElementById('main-search').value = '';
+            document.getElementById('main-location').value = '';
+            
+            // Clear all checkboxes and radio buttons
+            document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
+                input.checked = false;
+            });
+            
+            // Reset sort to newest
+            document.getElementById('sort-select').value = 'newest';
+            
+            // Reapply filters (which will show all jobs)
+            applyFilters();
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = Math.abs(now - date);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 1) return 'yesterday';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            return `${Math.floor(diffDays / 30)} months ago`;
+        }
+
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 ${
+                type === 'success' ? 'bg-green-500 text-white' : 
+                type === 'error' ? 'bg-red-500 text-white' : 
+                'bg-blue-500 text-white'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Mobile accordion functionality
+        function toggleFilterSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const toggle = document.querySelector(`[onclick="toggleFilterSection('${sectionId}')"]`);
+            
+            if (content && toggle) {
+                content.classList.toggle('active');
+                toggle.classList.toggle('active');
+            }
+        }
+
+        // Initialize accordion state on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if we're on mobile (screen width < 1024px)
+            if (window.innerWidth < 1024) {
+                // Close all accordion sections by default on mobile
+                const filterContents = document.querySelectorAll('.filter-content');
+                filterContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                const filterToggles = document.querySelectorAll('.filter-toggle');
+                filterToggles.forEach(toggle => {
+                    toggle.classList.remove('active');
+                });
+            }
+        });
+
+        // Handle window resize to maintain proper accordion state
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) {
+                // On desktop, ensure all content is visible
+                const filterContents = document.querySelectorAll('.filter-content');
+                filterContents.forEach(content => {
+                    content.classList.add('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

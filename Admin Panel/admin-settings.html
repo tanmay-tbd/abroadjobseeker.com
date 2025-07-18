@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Settings - Abroad Job Seeker Admin</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2C5F89',
+                        'secondary': '#4CAF50', 
+                        'accent': '#FF6B35'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        .sidebar-hover:hover { background-color: #f1f5f9; }
+        .metric-card { transition: all 0.3s ease; }
+        .metric-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .section-card { transition: all 0.3s ease; }
+        .section-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .sidebar-active { background-color: #e2e8f0; }
+        .sidebar-section-title { color: #64748b; }
+        .sidebar-border { border-color: #e2e8f0; }
+        .sidebar-icon-active { color: #6b7280; }
+        .sidebar-text { color: #334155; }
+        .sidebar-text-light { color: #64748b; }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-hidden">
+    <!-- Admin Layout -->
+    <div class="flex h-screen">
+        <!-- Enhanced Sidebar -->
+        <div class="w-64 bg-white border-r border-gray-200 shadow-sm flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="p-6 border-b sidebar-border">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-gray-600 to-gray-700 p-3 rounded-xl shadow-lg">
+                        <i class="fas fa-globe text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold sidebar-text">AJS Admin</h1>
+                        <p class="text-sm sidebar-text-light">Management Dashboard</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="flex-1 px-3 py-6">
+                <!-- Core Management -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Core Management</h3>
+                    <a href="admin-dashboard.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        Dashboard
+                    </a>
+                    <a href="admin-jobs.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-briefcase mr-3"></i>
+                        Job Management
+                    </a>
+                    <a href="admin-applications.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-file-alt mr-3"></i>
+                        Applications
+                    </a>
+                    <a href="admin-users.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-users mr-3"></i>
+                        User Management
+                    </a>
+                    <a href="admin-settings.html" class="flex items-center px-4 py-3 rounded-lg sidebar-active border-l-4 border-gray-500 mb-1 sidebar-text">
+                        <i class="fas fa-cog mr-3 sidebar-icon-active"></i>
+                        Settings
+                    </a>
+                </div>
+
+                <!-- Analytics & Reports -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Analytics & Reports</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-chart-bar mr-3"></i>
+                        Analytics
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-file-export mr-3"></i>
+                        Reports
+                    </a>
+                </div>
+
+                <!-- Financial -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Financial</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-credit-card mr-3"></i>
+                        Payments
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-receipt mr-3"></i>
+                        Invoices
+                    </a>
+                </div>
+
+                <!-- Communication -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Communication</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-envelope mr-3"></i>
+                        Messages
+                        <span class="ml-auto bg-gray-500 text-white text-xs px-2 py-1 rounded-full">12</span>
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Bottom User Section -->
+            <div class="p-6 border-t sidebar-border">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold sidebar-text">John Admin</p>
+                        <p class="text-xs sidebar-text-light">Super Administrator</p>
+                    </div>
+                    <button class="ml-auto sidebar-section-title hover:text-gray-700">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm border-b">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Platform Settings</h1>
+                        <nav class="text-sm text-gray-500">
+                            <a href="admin-dashboard.html" class="hover:text-primary">Dashboard</a>
+                            <span class="mx-2">/</span>
+                            <span class="text-gray-900">Settings</span>
+                        </nav>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="relative p-2 text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-cog text-xl"></i>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-sign-out-alt text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Action Buttons -->
+            <div class="bg-gray-50 px-6 py-4 border-b">
+                <div class="flex items-center justify-end space-x-4">
+                    <button class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-undo mr-2"></i>Reset All
+                    </button>
+                    <button class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
+                        <i class="fas fa-save mr-2"></i>Save All Changes
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Platform Settings Section -->
+                <div class="section-card bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Platform Settings</h2>
+                            <p class="text-sm text-gray-500">Basic website configuration and information</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-times mr-1"></i>Cancel
+                            </button>
+                            <button class="bg-secondary text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                                <i class="fas fa-save mr-1"></i>Save
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Site Name</label>
+                            <input type="text" value="AbroadJobSeeker" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Display name for your platform</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Contact Email</label>
+                            <input type="email" value="admin@abroadjobseeker.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Primary contact email address</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Site Description</label>
+                            <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">International Job Placement Platform - Connecting skilled professionals with visa sponsorship opportunities worldwide. Find your dream job abroad with verified employers and comprehensive immigration support.</textarea>
+                            <p class="text-xs text-gray-500 mt-1">Brief description of your platform (used in SEO)</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Support Phone</label>
+                            <input type="tel" value="+1-800-JOBS-HELP" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" pattern="[0-9\s\-\+\(\)]+" title="Please enter a valid phone number (numbers, spaces, dashes, and parentheses only)" minlength="10" maxlength="20" inputmode="numeric">
+                            <p class="text-xs text-gray-500 mt-1">Customer support phone number</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Time Zone</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>UTC-05:00 (EST)</option>
+                                <option>UTC+00:00 (GMT)</option>
+                                <option>UTC+01:00 (CET)</option>
+                                <option>UTC+08:00 (CST)</option>
+                                <option>UTC+10:00 (AEST)</option>
+                            </select>
+                            <p class="text-xs text-gray-500 mt-1">Default platform timezone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Configuration Section -->
+                <div class="section-card bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Email Configuration</h2>
+                            <p class="text-sm text-gray-500">SMTP settings and notification preferences</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition-colors">
+                                <i class="fas fa-paper-plane mr-1"></i>Test Email
+                            </button>
+                            <button class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-times mr-1"></i>Cancel
+                            </button>
+                            <button class="bg-secondary text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                                <i class="fas fa-save mr-1"></i>Save
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Server</label>
+                            <input type="text" value="mail.abroadjobseeker.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Port</label>
+                            <input type="number" value="587" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Username</label>
+                            <input type="text" value="noreply@abroadjobseeker.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Password</label>
+                            <input type="password" value="••••••••••••" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-4">Email Notifications</label>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <label class="text-sm font-medium text-gray-700">Welcome Email</label>
+                                        <p class="text-xs text-gray-500">Send welcome email to new users</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <label class="text-sm font-medium text-gray-700">Application Alerts</label>
+                                        <p class="text-xs text-gray-500">Notify admins of new applications</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <label class="text-sm font-medium text-gray-700">Job Notifications</label>
+                                        <p class="text-xs text-gray-500">Email alerts for new job postings</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <label class="text-sm font-medium text-gray-700">Marketing Emails</label>
+                                        <p class="text-xs text-gray-500">Newsletter and promotional emails</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer">
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Settings Section -->
+                <div class="section-card bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Security Settings</h2>
+                            <p class="text-sm text-gray-500">Password requirements and session management</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-times mr-1"></i>Cancel
+                            </button>
+                            <button class="bg-secondary text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                                <i class="fas fa-save mr-1"></i>Save
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Minimum Password Length</label>
+                            <input type="number" value="8" min="6" max="32" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Minimum characters required</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Session Timeout (minutes)</label>
+                            <input type="number" value="120" min="15" max="480" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Automatic logout after inactivity</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Max Login Attempts</label>
+                            <input type="number" value="5" min="3" max="10" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Failed attempts before lockout</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Account Lockout Duration (minutes)</label>
+                            <input type="number" value="30" min="5" max="1440" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <p class="text-xs text-gray-500 mt-1">Account lockout duration</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-4">Password Requirements</label>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded mr-3" checked>
+                                    <label class="text-sm text-gray-700">Require uppercase letters</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded mr-3" checked>
+                                    <label class="text-sm text-gray-700">Require lowercase letters</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded mr-3" checked>
+                                    <label class="text-sm text-gray-700">Require numbers</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded mr-3">
+                                    <label class="text-sm text-gray-700">Require special characters</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded mr-3" checked>
+                                    <label class="text-sm text-gray-700">Enable two-factor authentication</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appearance Settings Section -->
+                    
+            </main>
+        </div>
+    </div>
+</body>
+</html> 

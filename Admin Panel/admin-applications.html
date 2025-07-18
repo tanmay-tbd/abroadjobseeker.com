@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Management - Abroad Job Seeker Admin</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2C5F89',
+                        'secondary': '#4CAF50', 
+                        'accent': '#FF6B35'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        .sidebar-hover:hover { background-color: #f1f5f9; }
+        .metric-card { transition: all 0.3s ease; }
+        .metric-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .sidebar-active { background-color: #e2e8f0; }
+        .sidebar-section-title { color: #64748b; }
+        .sidebar-border { border-color: #e2e8f0; }
+        .sidebar-icon-active { color: #6b7280; }
+        .sidebar-text { color: #334155; }
+        .sidebar-text-light { color: #64748b; }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-hidden">
+    <!-- Admin Layout -->
+    <div class="flex h-screen">
+        <!-- Enhanced Sidebar -->
+        <div class="w-64 bg-white border-r border-gray-200 shadow-sm flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="p-6 border-b sidebar-border">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-gray-600 to-gray-700 p-3 rounded-xl shadow-lg">
+                        <i class="fas fa-globe text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold sidebar-text">AJS Admin</h1>
+                        <p class="text-sm sidebar-text-light">Management Dashboard</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="flex-1 px-3 py-6">
+                <!-- Core Management -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Core Management</h3>
+                    <a href="admin-dashboard.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        Dashboard
+                    </a>
+                    <a href="admin-jobs.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-briefcase mr-3"></i>
+                        Job Management
+                    </a>
+                    <a href="admin-applications.html" class="flex items-center px-4 py-3 rounded-lg sidebar-active border-l-4 border-gray-500 mb-1 sidebar-text">
+                        <i class="fas fa-file-alt mr-3 sidebar-icon-active"></i>
+                        Applications
+                    </a>
+                    <a href="admin-users.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-users mr-3"></i>
+                        User Management
+                    </a>
+                    <a href="admin-settings.html" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-cog mr-3"></i>
+                        Settings
+                    </a>
+                </div>
+
+                <!-- Analytics & Reports -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Analytics & Reports</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-chart-bar mr-3"></i>
+                        Analytics
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-file-export mr-3"></i>
+                        Reports
+                    </a>
+                </div>
+
+                <!-- Financial -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Financial</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-credit-card mr-3"></i>
+                        Payments
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-receipt mr-3"></i>
+                        Invoices
+                    </a>
+                </div>
+
+                <!-- Communication -->
+                <div class="mb-6">
+                    <h3 class="text-xs uppercase tracking-wide sidebar-section-title px-3 mb-3 font-semibold">Communication</h3>
+                    <a href="#" class="flex items-center px-4 py-3 rounded-lg sidebar-hover transition-all mb-1 sidebar-text">
+                        <i class="fas fa-envelope mr-3"></i>
+                        Messages
+                        <span class="ml-auto bg-gray-500 text-white text-xs px-2 py-1 rounded-full">12</span>
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Bottom User Section -->
+            <div class="p-6 border-t sidebar-border">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold sidebar-text">John Admin</p>
+                        <p class="text-xs sidebar-text-light">Super Administrator</p>
+                    </div>
+                    <button class="ml-auto sidebar-section-title hover:text-gray-700">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm border-b">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Application Management</h1>
+                        <nav class="text-sm text-gray-500">
+                            <a href="admin-dashboard.html" class="hover:text-primary">Dashboard</a>
+                            <span class="mx-2">/</span>
+                            <span class="text-gray-900">Applications</span>
+                        </nav>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="relative p-2 text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-cog text-xl"></i>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-sign-out-alt text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Action Buttons -->
+            <div class="bg-gray-50 px-6 py-4 border-b">
+                <div class="flex items-center justify-end space-x-4">
+                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                        <i class="fas fa-download mr-2"></i>Export Applications
+                    </button>
+                    <button class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Bulk Email
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Application Statistics -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Total Applications</p>
+                                <p class="text-2xl font-bold text-gray-900">8,329</p>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-file-alt text-primary text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Pending Review</p>
+                                <p class="text-2xl font-bold text-yellow-600">89</p>
+                            </div>
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Shortlisted</p>
+                                <p class="text-2xl font-bold text-secondary">1,247</p>
+                            </div>
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-star text-secondary text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Rejected</p>
+                                <p class="text-2xl font-bold text-red-600">2,893</p>
+                            </div>
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-times-circle text-red-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Progression Row -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Under Review</p>
+                                <p class="text-2xl font-bold text-blue-600">1,456</p>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-search text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Interview Scheduled</p>
+                                <p class="text-2xl font-bold text-purple-600">234</p>
+                            </div>
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-calendar-check text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-600 text-sm">Hired</p>
+                                <p class="text-2xl font-bold text-green-600">2,410</p>
+                            </div>
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-handshake text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Analytics -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <!-- Application Trends -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">Application Trends</h3>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 text-sm bg-primary text-white rounded-lg">6M</button>
+                                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">1Y</button>
+                            </div>
+                        </div>
+                        <div class="h-64">
+                            <canvas id="applicationTrendsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Application Status Flow -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Application Status Flow</h3>
+                        <div class="h-64">
+                            <canvas id="applicationStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters and Search -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Search Applications</label>
+                            <input type="text" placeholder="Search by name, email, job..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>All Status</option>
+                                <option>Submitted</option>
+                                <option>Under Review</option>
+                                <option>Shortlisted</option>
+                                <option>Interview Scheduled</option>
+                                <option>Rejected</option>
+                                <option>Hired</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Job Category</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>All Categories</option>
+                                <option>Technology</option>
+                                <option>Healthcare</option>
+                                <option>Engineering</option>
+                                <option>Finance</option>
+                                <option>Marketing</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Date Range</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>All Dates</option>
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                                <option>Last 6 months</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Country</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>All Countries</option>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                                <option>Australia</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-search mr-2"></i>Search
+                        </button>
+                        <button class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                            <i class="fas fa-undo mr-2"></i>Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Applications Table -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-semibold">Job Applications (89 pending review)</h2>
+                            <div class="flex items-center space-x-2">
+                                <button class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition-colors">
+                                    <i class="fas fa-times mr-1"></i>Reject Selected
+                                </button>
+                                <button class="bg-secondary text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+                                    <i class="fas fa-star mr-1"></i>Shortlist Selected
+                                </button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b border-gray-200 text-left">
+                                        <th class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Applicant</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Job Title</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Company</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Location</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Status</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Applied Date</th>
+                                        <th class="py-3 px-4 font-medium text-gray-700">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-blue-600">DW</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">David Wilson</p>
+                                                    <p class="text-sm text-gray-500">david.w@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Software Developer</p>
+                                            <p class="text-sm text-gray-500">Full-time • Remote</p>
+                                        </td>
+                                        <td class="py-3 px-4">TechCorp Canada</td>
+                                        <td class="py-3 px-4">Toronto, ON</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Under Review</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-15</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="Update Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-secondary text-white px-2 py-1 rounded text-xs hover:bg-green-600" title="Shortlist">
+                                                    <i class="fas fa-star"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-green-600">LC</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">Lisa Chen</p>
+                                                    <p class="text-sm text-gray-500">lisa.chen@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Data Analyst</p>
+                                            <p class="text-sm text-gray-500">Full-time • Hybrid</p>
+                                        </td>
+                                        <td class="py-3 px-4">DataTech NZ</td>
+                                        <td class="py-3 px-4">Auckland, NZ</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Shortlisted</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-14</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="Update Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-orange-500 text-white px-2 py-1 rounded text-xs hover:bg-orange-600" title="Schedule Interview">
+                                                    <i class="fas fa-calendar"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-purple-600">MT</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">Mark Taylor</p>
+                                                    <p class="text-sm text-gray-500">mark.t@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Registered Nurse</p>
+                                            <p class="text-sm text-gray-500">Full-time • On-site</p>
+                                        </td>
+                                        <td class="py-3 px-4">HealthCare AU</td>
+                                        <td class="py-3 px-4">Sydney, AU</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Submitted</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-13</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="Update Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-secondary text-white px-2 py-1 rounded text-xs hover:bg-green-600" title="Shortlist">
+                                                    <i class="fas fa-star"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-red-600">SJ</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">Sarah Johnson</p>
+                                                    <p class="text-sm text-gray-500">sarah.j@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Marketing Manager</p>
+                                            <p class="text-sm text-gray-500">Full-time • On-site</p>
+                                        </td>
+                                        <td class="py-3 px-4">Global Marketing Ltd</td>
+                                        <td class="py-3 px-4">London, UK</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Interview Scheduled</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-12</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="Update Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-orange-500 text-white px-2 py-1 rounded text-xs hover:bg-orange-600" title="View Interview">
+                                                    <i class="fas fa-calendar-check"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-orange-600">RP</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">Robert Park</p>
+                                                    <p class="text-sm text-gray-500">robert.p@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Civil Engineer</p>
+                                            <p class="text-sm text-gray-500">Full-time • On-site</p>
+                                        </td>
+                                        <td class="py-3 px-4">BuildTech Engineering</td>
+                                        <td class="py-3 px-4">Berlin, Germany</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Rejected</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-10</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="Update Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-gray-500 text-white px-2 py-1 rounded text-xs hover:bg-gray-600" title="Archive">
+                                                    <i class="fas fa-archive"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="py-3 px-4">
+                                            <input type="checkbox" class="rounded">
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-sm font-medium text-emerald-600">EW</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium">Emily Wong</p>
+                                                    <p class="text-sm text-gray-500">emily.w@email.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            <p class="font-medium">Financial Analyst</p>
+                                            <p class="text-sm text-gray-500">Full-time • Hybrid</p>
+                                        </td>
+                                        <td class="py-3 px-4">FinanceMax Corp</td>
+                                        <td class="py-3 px-4">New York, NY</td>
+                                        <td class="py-3 px-4">
+                                            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-xs">Hired</span>
+                                        </td>
+                                        <td class="py-3 px-4 text-sm text-gray-500">2024-01-08</td>
+                                        <td class="py-3 px-4">
+                                            <div class="flex space-x-1">
+                                                <button class="text-primary hover:text-blue-700 p-1" title="View Application">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600" title="View Details">
+                                                    <i class="fas fa-info"></i>
+                                                </button>
+                                                <button class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600" title="Contact Applicant">
+                                                    <i class="fas fa-envelope"></i>
+                                                </button>
+                                                <button class="bg-green-500 text-white px-2 py-1 rounded text-xs hover:bg-green-600" title="Success">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="text-sm text-gray-500">
+                                Showing 1-6 of 8,329 applications
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50">Previous</button>
+                                <button class="px-3 py-1 bg-primary text-white rounded">1</button>
+                                <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50">2</button>
+                                <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50">3</button>
+                                <span class="px-3 py-1">...</span>
+                                <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50">833</button>
+                                <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Chart.js Initialization -->
+    <script>
+        // Application Trends Chart
+        const applicationTrendsCtx = document.getElementById('applicationTrendsChart').getContext('2d');
+        new Chart(applicationTrendsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Total Applications',
+                    data: [1200, 1450, 1380, 1620, 1750, 1890],
+                    borderColor: '#2C5F89',
+                    backgroundColor: 'rgba(44, 95, 137, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Hired',
+                    data: [180, 220, 195, 245, 280, 320],
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Application Status Flow Chart
+        const applicationStatusCtx = document.getElementById('applicationStatusChart').getContext('2d');
+        new Chart(applicationStatusCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Submitted', 'Under Review', 'Shortlisted', 'Interview', 'Hired', 'Rejected'],
+                datasets: [{
+                    label: 'Applications Count',
+                    data: [8329, 1456, 1247, 234, 2410, 2893],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#1E40AF',
+                        '#4CAF50',
+                        '#9C27B0',
+                        '#2E7D32',
+                        '#F44336'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
