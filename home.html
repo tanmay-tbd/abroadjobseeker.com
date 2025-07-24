@@ -57,10 +57,10 @@
     <meta property="linkedin:owner" content="abroad-job-seeker">
     
     <!-- Favicon and Icons -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="favicon.svg">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="apple-touch-icon.png">
     
     <!-- DNS Prefetch and Preconnect for Performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -122,7 +122,7 @@
       "url": "https://abroadjobseeker.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://abroadjobseeker.com/favicon.svg",
+        "url": "https://abroadjobseeker.com/apple-touch-icon.png",
         "width": "200",
         "height": "200"
       },
@@ -235,43 +235,39 @@
     <!-- Hero Section with Integrated Navigation -->
     <section class="relative overflow-hidden text-white min-h-screen" style="background: linear-gradient(135deg, #2C5F89 0%, #1e3a5f 50%, #0f2027 100%);">
         <!-- Navigation -->
-        <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/5 border-b border-white/10 transition-all duration-300" id="stickyNav">
+        <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/95 border-b border-gray-200 shadow-sm transition-all duration-300" id="stickyNav">
             <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center py-4">
+                <div class="flex justify-between items-center py-0">
                     <!-- Logo -->
                     <a href="home.html" class="flex items-center space-x-3 group cursor-pointer">
-                        <div class="bg-gradient-to-br from-white/20 to-accent/50 p-3 rounded-2xl shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 group-hover:shadow-xl backdrop-blur-sm">
-                            <i class="fas fa-globe text-white text-2xl"></i>
-                        </div>
-                        <div class="transform group-hover:translate-x-1 transition-transform duration-300">
-                            <h1 class="text-2xl font-bold text-white group-hover:text-accent transition-colors duration-300">Abroad Job Seeker</h1>
-                            <p class="text-sm text-white/70 group-hover:text-white/90 transition-colors duration-300">Global Career Opportunities</p>
+                        <div class="transform group-hover:scale-105 transition-all duration-300">
+                            <img src="Abroad Job Seekar-01.png" alt="Abroad Job Seeker" class="h-24 w-90">
                         </div>
                     </a>
                     
                     <!-- Navigation -->
                     <div class="hidden lg:flex items-center space-x-8">
-                        <a href="home.html" class="text-white hover:text-white transition-all duration-300 py-2 px-1 border-b-2 border-accent font-bold">
+                        <a href="home.html" class="text-primary hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-accent font-bold">
                             Home
                         </a>
-                        <a href="about.html" class="text-white/80 hover:text-white transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
+                        <a href="about.html" class="text-primary/80 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
                             About
                         </a>
-                        <a href="job_list.html" class="text-white/80 hover:text-white transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
+                        <a href="job_list.html" class="text-primary/80 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
                             Jobs
                         </a>
-                        <a href="services.html" class="text-white/80 hover:text-white transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
+                        <a href="services.html" class="text-primary/80 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
                             Services
                         </a>
-                        <a href="contact.html" class="text-white/80 hover:text-white transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
+                        <a href="contact.html" class="text-primary/80 hover:text-primary transition-all duration-300 py-2 px-1 border-b-2 border-transparent hover:border-accent font-bold hover:font-black">
                             Contact
                         </a>
                     </div>
                     
                     <!-- Auth Section -->
                     <div class="hidden lg:flex items-center space-x-3">
-                        <a href="login.html" class="text-white/90 hover:text-white transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-white/10 relative group overflow-hidden backdrop-blur-sm">
-                            <div class="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        <a href="login.html" class="text-primary/90 hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 relative group overflow-hidden backdrop-blur-sm">
+                            <div class="absolute inset-0 bg-primary/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                             <span class="relative z-10">
                                 <i class="fas fa-sign-in-alt mr-2"></i>Login
                             </span>
@@ -286,9 +282,9 @@
                     
                     <!-- Mobile menu button -->
                     <div class="lg:hidden">
-                        <button id="mobile-menu-button" class="text-white hover:text-accent focus:outline-none p-3 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 relative group backdrop-blur-sm">
+                        <button id="mobile-menu-button" class="text-primary hover:text-accent focus:outline-none p-3 rounded-lg hover:bg-primary/10 transition-all duration-300 transform hover:scale-105 relative group backdrop-blur-sm">
                             <i class="fas fa-bars text-xl transition-transform duration-300 group-hover:scale-110"></i>
-                            <div class="absolute inset-0 bg-white/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </button>
                     </div>
                 </div>
@@ -298,26 +294,26 @@
                     <div class="border-t border-white/10 pt-4">
                         <!-- Mobile Navigation Links -->
                         <div class="space-y-2">
-                            <a href="home.html" class="block text-white hover:text-white bg-white/20 hover:bg-white/30 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm border-l-4 border-accent">
+                            <a href="home.html" class="block text-primary hover:text-primary bg-primary/20 hover:bg-primary/30 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm border-l-4 border-accent">
                                 <i class="fas fa-home mr-2"></i>Home
                             </a>
-                            <a href="about.html" class="block text-white/80 hover:text-white hover:bg-white/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
+                            <a href="about.html" class="block text-primary/80 hover:text-primary hover:bg-primary/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
                                 <i class="fas fa-info-circle mr-2"></i>About
                             </a>
-                            <a href="job_list.html" class="block text-white/80 hover:text-white hover:bg-white/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
+                            <a href="job_list.html" class="block text-primary/80 hover:text-primary hover:bg-primary/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
                                 <i class="fas fa-briefcase mr-2"></i>Jobs
                             </a>
-                            <a href="services.html" class="block text-white/80 hover:text-white hover:bg-white/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
+                            <a href="services.html" class="block text-primary/80 hover:text-primary hover:bg-primary/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
                                 <i class="fas fa-cogs mr-2"></i>Services
                             </a>
-                            <a href="contact.html" class="block text-white/80 hover:text-white hover:bg-white/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
+                            <a href="contact.html" class="block text-primary/80 hover:text-primary hover:bg-primary/10 transition duration-300 py-3 px-4 rounded-lg font-bold backdrop-blur-sm">
                                 <i class="fas fa-envelope mr-2"></i>Contact
                             </a>
                         </div>
                         
                         <!-- Mobile Auth Buttons -->
                         <div class="mt-4 space-y-2">
-                            <a href="login.html" class="block text-center text-white/90 hover:text-white hover:bg-white/10 transition duration-300 py-3 px-4 rounded-lg font-medium border border-white/20 backdrop-blur-sm">
+                            <a href="login.html" class="block text-center text-primary/90 hover:text-primary hover:bg-primary/10 transition duration-300 py-3 px-4 rounded-lg font-medium border border-primary/20 backdrop-blur-sm">
                                 <i class="fas fa-sign-in-alt mr-2"></i>Login
                             </a>
                             <a href="register.html" class="block text-center bg-gradient-to-r from-accent to-orange-600 text-white py-3 px-4 rounded-lg hover:from-accent/90 hover:to-orange-600/90 transition duration-300 btn shadow-md">
@@ -358,9 +354,9 @@
                 const mobileNavLinks = nav.querySelectorAll('#mobile-menu a[href*=".html"]');
                 
                 if (window.scrollY > 100) {
-                    // Change background to solid white
-                    nav.classList.remove('bg-white/5');
-                    nav.classList.add('bg-white/90', 'backdrop-blur-lg', 'shadow-lg');
+                    // Enhance background to more solid white with stronger shadow
+                    nav.classList.remove('bg-white/95', 'shadow-sm');
+                    nav.classList.add('bg-white', 'backdrop-blur-lg', 'shadow-lg');
                     
                     // Change logo colors to dark
                     logoIcon.classList.remove('text-white');
@@ -370,7 +366,7 @@
                     logoSubtitle.classList.remove('text-white/70', 'group-hover:text-white/90');
                     logoSubtitle.classList.add('text-primary/70', 'group-hover:text-primary/90');
                     
-                    // Change ALL navigation links to dark (including Home)
+                    // Keep ALL navigation links dark (including Home)
                     allNavLinks.forEach(link => {
                         if (link !== logo) { // Skip the logo link to avoid double-processing
                             // Special handling for Home link to maintain active state
@@ -378,8 +374,7 @@
                                 link.classList.remove('text-white', 'hover:text-white');
                                 link.classList.add('text-primary', 'hover:text-primary');
                                 // Keep the accent border for active state
-                                link.classList.remove('border-accent');
-                                link.classList.add('border-primary');
+                                link.classList.add('border-accent');
                             } else {
                                 link.classList.remove('text-white/80', 'hover:text-white');
                                 link.classList.add('text-primary/80', 'hover:text-primary');
@@ -387,89 +382,86 @@
                         }
                     });
                     
-                    // Change mobile navigation links to dark
+                    // Keep mobile navigation links dark
                     mobileNavLinks.forEach(link => {
                         // Special handling for Home link to maintain active state
                         if (link.href.includes('home.html')) {
                             link.classList.remove('text-white', 'hover:text-white', 'bg-white/20', 'hover:bg-white/30');
                             link.classList.add('text-primary', 'hover:text-primary', 'bg-primary/20', 'hover:bg-primary/30');
                             // Keep the accent border for active state
-                            link.classList.remove('border-accent');
-                            link.classList.add('border-primary');
+                            link.classList.add('border-accent');
                         } else {
                             link.classList.remove('text-white/80', 'hover:text-white');
                             link.classList.add('text-primary/80', 'hover:text-primary');
                         }
                     });
                     
-                    // Change login button to dark
+                    // Keep login button dark
                     const loginBtn = authLinks[0]; // login button
                     if (loginBtn) {
                         loginBtn.classList.remove('text-white/90', 'hover:text-white', 'hover:bg-white/10');
                         loginBtn.classList.add('text-primary/90', 'hover:text-primary', 'hover:bg-primary/10');
                     }
                     
-                    // Change mobile menu button to dark
+                    // Keep mobile menu button dark
                     if (mobileMenuButton) {
                         mobileMenuButton.classList.remove('text-white', 'hover:text-accent', 'hover:bg-white/10');
                         mobileMenuButton.classList.add('text-primary', 'hover:text-accent', 'hover:bg-primary/10');
                     }
                 } else {
-                    // Revert to transparent background
-                    nav.classList.remove('bg-white/90', 'backdrop-blur-lg', 'shadow-lg');
-                    nav.classList.add('bg-white/5');
+                    // Revert to lighter white background
+                    nav.classList.remove('bg-white', 'backdrop-blur-lg', 'shadow-lg');
+                    nav.classList.add('bg-white/95', 'shadow-sm');
                     
-                    // Revert logo colors to white
-                    logoIcon.classList.remove('text-primary');
-                    logoIcon.classList.add('text-white');
-                    logoTitle.classList.remove('text-primary', 'group-hover:text-accent');
-                    logoTitle.classList.add('text-white', 'group-hover:text-accent');
-                    logoSubtitle.classList.remove('text-primary/70', 'group-hover:text-primary/90');
-                    logoSubtitle.classList.add('text-white/70', 'group-hover:text-white/90');
+                    // Keep logo colors dark (consistent with white background)
+                    logoIcon.classList.remove('text-white');
+                    logoIcon.classList.add('text-primary');
+                    logoTitle.classList.remove('text-white', 'group-hover:text-accent');
+                    logoTitle.classList.add('text-primary', 'group-hover:text-accent');
+                    logoSubtitle.classList.remove('text-white/70', 'group-hover:text-white/90');
+                    logoSubtitle.classList.add('text-primary/70', 'group-hover:text-primary/90');
                     
-                    // Revert ALL navigation links to white
+                    // Keep ALL navigation links dark (no revert to white)
                     allNavLinks.forEach(link => {
                         if (link !== logo) { // Skip the logo link to avoid double-processing
                             // Special handling for Home link to maintain active state
                             if (link.href.includes('home.html') && !link.querySelector('i')) {
-                                link.classList.remove('text-primary', 'hover:text-primary');
-                                link.classList.add('text-white', 'hover:text-white');
-                                // Restore accent border for active state
-                                link.classList.remove('border-primary');
+                                link.classList.remove('text-white', 'hover:text-white');
+                                link.classList.add('text-primary', 'hover:text-primary');
+                                // Keep accent border for active state
                                 link.classList.add('border-accent');
                             } else {
-                                link.classList.remove('text-primary/80', 'hover:text-primary');
-                                link.classList.add('text-white/80', 'hover:text-white');
+                                link.classList.remove('text-white/80', 'hover:text-white');
+                                link.classList.add('text-primary/80', 'hover:text-primary');
                             }
                         }
                     });
                     
-                    // Revert mobile navigation links to white
+                    // Keep mobile navigation links dark (no revert to white)
                     mobileNavLinks.forEach(link => {
                         // Special handling for Home link to maintain active state
                         if (link.href.includes('home.html')) {
-                            link.classList.remove('text-primary', 'hover:text-primary', 'bg-primary/20', 'hover:bg-primary/30');
-                            link.classList.add('text-white', 'hover:text-white', 'bg-white/20', 'hover:bg-white/30');
-                            // Restore accent border for active state
-                            link.classList.remove('border-primary');
+                            link.classList.remove('text-white', 'hover:text-white', 'bg-white/20', 'hover:bg-white/30');
+                            link.classList.add('text-primary', 'hover:text-primary', 'bg-primary/20', 'hover:bg-primary/30');
+                            // Keep accent border for active state
                             link.classList.add('border-accent');
                         } else {
-                            link.classList.remove('text-primary/80', 'hover:text-primary');
-                            link.classList.add('text-white/80', 'hover:text-white');
+                            link.classList.remove('text-white/80', 'hover:text-white');
+                            link.classList.add('text-primary/80', 'hover:text-primary');
                         }
                     });
                     
-                    // Revert login button to white
+                    // Keep login button dark (no revert to white)
                     const loginBtn = authLinks[0]; // login button
                     if (loginBtn) {
-                        loginBtn.classList.remove('text-primary/90', 'hover:text-primary', 'hover:bg-primary/10');
-                        loginBtn.classList.add('text-white/90', 'hover:text-white', 'hover:bg-white/10');
+                        loginBtn.classList.remove('text-white/90', 'hover:text-white', 'hover:bg-white/10');
+                        loginBtn.classList.add('text-primary/90', 'hover:text-primary', 'hover:bg-primary/10');
                     }
                     
-                    // Revert mobile menu button to white
+                    // Keep mobile menu button dark (no revert to white)
                     if (mobileMenuButton) {
-                        mobileMenuButton.classList.remove('text-primary', 'hover:text-accent', 'hover:bg-primary/10');
-                        mobileMenuButton.classList.add('text-white', 'hover:text-accent', 'hover:bg-white/10');
+                        mobileMenuButton.classList.remove('text-white', 'hover:text-accent', 'hover:bg-white/10');
+                        mobileMenuButton.classList.add('text-primary', 'hover:text-accent', 'hover:bg-primary/10');
                     }
                 }
             });
@@ -1698,14 +1690,8 @@
                     <!-- Company Info & Newsletter -->
                     <div class="lg:col-span-2">
                         <!-- Logo & Description -->
-                        <div class="flex items-center space-x-3 mb-6">
-                            <div class="bg-gradient-to-br from-primary to-accent p-3 rounded-2xl shadow-lg">
-                                <i class="fas fa-globe text-white text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold">Abroad Job Seeker</h3>
-                                <p class="text-gray-300 text-sm">Global Career Opportunities</p>
-                            </div>
+                        <div class="flex items-center space-x-3 mb-0">
+                            <img src="Abroad Job Seekar-02.png" alt="Abroad Job Seeker" class="h-32 w-84">
                         </div>
                         
                         <p class="text-gray-300 mb-6 leading-relaxed">
